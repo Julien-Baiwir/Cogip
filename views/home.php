@@ -21,4 +21,7 @@
         </section>
         <!-- <div class="m-0 flex justify-center"><img src="assets/images/rectangle.svg" alt="" ></div> -->
     </header>
+    <footer>
+        <?php require 'views/includes/footer.php'; ?>
+    </footer>
 </body>
