@@ -1,5 +1,3 @@
-<?php
-
-foreach($companies as $companies): ?>
-<h2><?= $companies->name()?></h2>
+<?php foreach($companies as $company): ?>
+    <h2><?= $company->getName() ?></h2>
 <?php endforeach; ?>
