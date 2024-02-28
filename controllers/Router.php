@@ -11,20 +11,21 @@ class Router
         {
             // Chargement automatique des classes dans le dossier models
             spl_autoload_register(function ($class){
-                require_once('models/' . $class . '.php'); // Correction ici
+                require_once('models/' . $class . '.php'); 
             });
 
             $url = '';
 
+            // Le controlleur est inclus selon l'action de l'utilisateur
             if(isset($_GET['url']))
             {
                 $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
 
-                $controller = ucfirst(strtolower($url[0])); // Correction ici
+                $controller = ucfirst(strtolower($url[0])); 
 
                 $controllerClass = "Controller" . $controller;
 
-                $controllerFile = "controllers/" . $controllerClass . ".php"; // Correction ici
+                $controllerFile = "controllers/" . $controllerClass . ".php";
 
                 if(file_exists($controllerFile))
                 {
@@ -38,11 +39,12 @@ class Router
             }
             else
             {
-                require_once('controllers/homePageController.php'); // Correction ici
-                $this->_ctrl = new HomePageController($url); // Correction ici
+                require_once('controllers/HomePageController.php'); 
+                $this->_ctrl = new HomePageController($url); 
             }
 
         }
+        // Gestion des erreurs
         catch(Exception $e)
         {
             $errorMsg = $e->getMessage();
