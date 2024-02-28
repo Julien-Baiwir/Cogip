@@ -6,6 +6,6 @@ class HomepageController
     public function index()
     {
         // Load the view
-        require 'View/home.php';
+        require 'views/home.php';
     }
 }

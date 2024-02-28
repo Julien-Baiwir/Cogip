@@ -14,7 +14,7 @@
 </head>
 <body>
     <header class="bg-yellow-300 ">
-       <?php require 'View/includes/header.php'; ?> 
+       <?php require 'views/includes/header.php'; ?> 
        <section class="flex flex-col justify-center items-center font-black mt-10">
             <h1 class="uppercase font-inter text-4xl text-center">Manage your customers and invoices easly</h1>
             <img src="src/img/header.png" alt="" srcset="">
