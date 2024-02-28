@@ -5,4 +5,4 @@ error_reporting(E_ALL);
 
 ?>
 
-<a href="index.php?url=companies">Voir les entreprises</a>
+<a href="index.php?url=companies">Voir la liste des entreprises</a>
