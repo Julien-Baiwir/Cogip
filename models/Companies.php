@@ -56,12 +56,12 @@ class Companies {
     }
 
     public function setCreatedAt($created_at) {
-        // You may want to validate the datetime format here
+        // voir le format de date
         $this->_created_at = $created_at;
     }
 
     public function setUpdateDat($update_dat) {
-        // You may want to validate the datetime format here
+        // voir le format de date
         $this->_update_dat = $update_dat;
     }
 
