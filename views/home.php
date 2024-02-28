@@ -15,10 +15,10 @@
 <body>
     <header class="bg-yellow-300 ">
        <?php require 'views/includes/header.php'; ?> 
-       <section class="flex flex-col justify-center items-center font-black mt-10 lg:flex-row">
-            <h1 class="uppercase font-inter text-4xl text-center lg:text-6xl">Manage your customers and invoices easly</h1>
-            <img src="assets/images/header.png" alt="" class="hidden">
+       <section class="flex flex-col items-center font-black lg:flex-row lg:p-14">
+          <h1 class="uppercase font-inter text-4xl text-center lg:text-6xl lg:text-left ">Manage your customers and invoices easly</h1>
+          <img src="assets/images/header.png" alt="" class="lg:w-1/2">
         </section>
-        <!-- <div class="m-0 flex justify-center"><img src="assets/images/rectangle.svg" alt="" ></div> -->
+        <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="w-11/12 relative bottom-14 left-14 lg:bottom-24"></div>
     </header>
 </body>
