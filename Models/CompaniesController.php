@@ -1,5 +1,6 @@
 <?php
-class CompaniesController.php extends Model
+
+class CompaniesController extends Model
 {
     public function getArticles();
     {

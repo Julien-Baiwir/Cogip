@@ -9,7 +9,7 @@ class Router
     {
         try
         {
-            // Chargement automatique des classes
+            // Chargement automatique des classes dans le dossier models
             spl_autoload_register(function ($class){
                 require_once('models/' . $class . '.php'); // Correction ici
             });
