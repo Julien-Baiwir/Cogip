@@ -10,12 +10,12 @@ class ControllerHomePage{
     else$this->articles();
     }
 
-    private function articles()
+    private function companies()
     {
-        $this->articleManager = new CompaniesManager;
+        $this->companiesManager = new CompaniesManager;
         $companies = $this->_companiesManager->getCompanies();
 
-        require_once('views/home.php')
+        require_once('views/home.php');
     }
 
 }

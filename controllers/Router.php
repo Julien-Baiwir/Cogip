@@ -2,7 +2,7 @@
 
 class Router
 {
-    private $_ctrl;
+    private $_ctrl; // private controller
     private $_view;
 
     public function routeReq()
@@ -27,7 +27,7 @@ class Router
 
                 $controllerFile = "controllers/" . $controllerClass . ".php";
 
-                if(file_exists($controllerFile))
+            if(file_exists($controllerFile))
                 {
                     require_once($controllerFile);
                     $this->_ctrl = new $controllerClass($url);
@@ -37,11 +37,13 @@ class Router
                     throw new Exception('Page introuvable');
                 }
             }
+
             else
             {
-                require_once('controllers/HomePageController.php'); 
-                $this->_ctrl = new HomePageController($url); 
+                require_once('controllers/ControllerCompanies.php'); 
+                $this->_ctrl = new ControllerCompanies($url); 
             }
+            // prévoir tous les controleurs
 
         }
         // Gestion des erreurs
