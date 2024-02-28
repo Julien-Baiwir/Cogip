@@ -1,6 +1,6 @@
 <?php
 
-class ControllerHomePage{
+class ControllerCompanies{
     private $_CompaniesManager;
     private $_view;
 
@@ -15,7 +15,9 @@ class ControllerHomePage{
         $this->companiesManager = new CompaniesManager;
         $companies = $this->_companiesManager->getCompanies();
 
-        require_once('views/home.php');
+        require_once('views/companies/index.php');
+
+        // Ici il faudra modifier pour faire une fonction sécuriser.
     }
 
 }
