@@ -7,12 +7,12 @@ class ControllerCompanies{
     public function __construct($url){
         if (isset($url) && count($url) >1)
         throw new Exception('Page introuvable');
-    else$this->articles();
+        else$this->companies();// ??
     }
 
     private function companies()
     {
-        $this->companiesManager = new CompaniesManager;
+        $this->_companiesManager = new CompaniesManager;
         $companies = $this->_companiesManager->getCompanies();
 
         require_once('views/companies/index.php');

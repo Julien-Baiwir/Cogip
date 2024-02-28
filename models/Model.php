@@ -9,7 +9,7 @@ abstract class Model
 
     //INSTANCE LA CONNEXION A LA BDD
     private static function setBdd(){
-        self::$_bdd = new PDO('mysql:host;dbname=cogip;charset=utf8', 'root', 'root84$');// identifiant et mot de passe à changer
+        self::$_bdd = new PDO('mysql:localhost;dbname=cogip;charset=utf8', 'root', 'root84$');// identifiant et mot de passe à changer
         self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     
     }

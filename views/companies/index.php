@@ -1,5 +1,5 @@
 <?php
 
 foreach($companies as $companies): ?>
-<h2><?= $comapnies->title()?></h2>
+<h2><?= $companies->name()?></h2>
 <?php endforeach; ?>
