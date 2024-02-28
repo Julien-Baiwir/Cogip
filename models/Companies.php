@@ -1,51 +1,97 @@
 <?php
 
-class Companies{
+class Companies {
 
     private $_id;
-    private $_title;
+    private $_name;
+    private $_type_id;
+    private $_country;
+    private $_tva;
+    private $_created_at;
+    private $_update_dat;
 
-    // ici on ajoute toutes les différentes colonnes de la table ( tva, noms, contacts etc..)
+    // Constructor
+    public function __construct(array $data) {
+        $this->hydrate($data);
 
-    // Constructeur
-    public function __construct(array $data)
-    {
-        $this->hydrate($data); // récupère le paramètre data dans notre model.php
-
-        foreach($data as $key => $value){
-            $method ='set'.ucfirst($key); // variable est égale au setter
-            if(method_exists($this, $method))
-                $this->$method($value);  
+        foreach($data as $key => $value) {
+            $method = 'set' . ucfirst($key);
+            if (method_exists($this, $method)) {
+                $this->$method($value);
+            }
         }
     }
 
     // Setters
-    public function setId($id)
-    {
+    public function setId($id) {
         $id = (int) $id;
         if ($id > 0) {
             $this->_id = $id;
         }
     }
 
-    public function setTitle($title)
-    {
-        if (is_string($title)) {
-            $this->_title = $title;
+    public function setName($name) {
+        if (is_string($name)) {
+            $this->_name = $name;
         }
     }
-    // créer d'autres fonctions qui viennent préparer les autres données de la table
 
-    // Getters fonctions qui viennent récupérer les données (car les variables sont privées
-    // pour une bonne protection des données, obligé de passer par des getters pour sortir 
-    // les données de la classe)
-    public function getId()
-    {
+    public function setTypeId($type_id) {
+        $type_id = (int) $type_id;
+        if ($type_id > 0) {
+            $this->_type_id = $type_id;
+        }
+    }
+
+    public function setCountry($country) {
+        if (is_string($country)) {
+            $this->_country = $country;
+        }
+    }
+
+    public function setTva($tva) {
+        if (is_string($tva)) {
+            $this->_tva = $tva;
+        }
+    }
+
+    public function setCreatedAt($created_at) {
+        // You may want to validate the datetime format here
+        $this->_created_at = $created_at;
+    }
+
+    public function setUpdateDat($update_dat) {
+        // You may want to validate the datetime format here
+        $this->_update_dat = $update_dat;
+    }
+
+    // Getters
+    public function getId() {
         return $this->_id;
     }
 
-    public function getTitle()
-    {
-        return $this->_title;
+    public function getName() {
+        return $this->_name;
+    }
+
+    public function getTypeId() {
+        return $this->_type_id;
+    }
+
+    public function getCountry() {
+        return $this->_country;
+    }
+
+    public function getTva() {
+        return $this->_tva;
+    }
+
+    public function getCreatedAt() {
+        return $this->_created_at;
+    }
+
+    public function getUpdateDat() {
+        return $this->_update_dat;
     }
 }
+
