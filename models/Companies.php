@@ -4,6 +4,7 @@ class Companies{
 
     private $_id;
     private $_title;
+
     // ici on ajoute toutes les différentes colonnes de la table ( tva, noms, contacts etc..)
 
     // Constructeur
