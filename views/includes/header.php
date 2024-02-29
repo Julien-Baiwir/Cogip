@@ -27,7 +27,7 @@
         <img src="assets/images/header.png" alt="" class="overflow-hidden">
     </section>
     <?php endif; ?>
-    <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="w-4/5 relative bottom-10 left-14 lg:w-full lg:bottom-24"></div>
+    <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="w-4/5 relative bottom-10 left-14 lg:w-full lg:bottom-22"></div>
 </header>
 
 

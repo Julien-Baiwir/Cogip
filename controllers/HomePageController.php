@@ -5,7 +5,11 @@ class HomepageController
 {
     public function index()
     {
-        // Load the view
+        // Welcome message 
+        $isLoggedIn = UserModel::isLoggedIn();
+        require 'views/includes/welcomeMessage.php';
+
+        // Load page
         require 'views/home.php';
     }
 }
