@@ -17,8 +17,8 @@
        <?php require 'views/includes/header.php'; ?> 
        <section class="flex flex-col items-center font-black lg:flex-row lg:p-14">
           <h1 class="uppercase font-inter text-4xl text-center lg:text-6xl lg:text-left ">Manage your customers and invoices easly</h1>
-          <img src="assets/images/header.png" alt="" class="lg:w-1/2">
+          <img src="assets/images/header.png" alt="" class="overflow-hidden">
         </section>
-        <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="w-11/12 relative bottom-14 left-14 lg:bottom-24"></div>
+        <!-- <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="h-20 relative bottom-10 left-14 lg:bottom-24"></div> -->
     </header>
 </body>
