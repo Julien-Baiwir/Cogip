@@ -22,12 +22,12 @@
     </section>
     <!-- home page header -->
     <?php if ($isHomePage): ?>
-    <section class="flex flex-col items-center font-black lg:flex-row lg:p-14" id="homepage">
-        <h1 class="uppercase font-inter text-4xl text-center lg:text-6xl lg:text-left ">Manage your customers and invoices easly</h1>
+    <section class="flex flex-col items-center font-black lg:flex-row lg:p-14 p-8" id="homepage">
+        <p class="uppercase font-inter text-4xl text-center lg:text-6xl lg:text-left">Manage your customers and invoices easly</p>
         <img src="assets/images/header.png" alt="" class="overflow-hidden">
     </section>
     <?php endif; ?>
-    <!-- <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="h-20 relative bottom-10 left-14 lg:bottom-24"></div> -->
+    <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="w-4/5 relative bottom-10 left-14 lg:w-full lg:bottom-24"></div>
 </header>
 
 
