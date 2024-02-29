@@ -9,6 +9,7 @@ require_once('controllers/Router.php');
 // Inclure le contenu de home.php
 
 $router = new Router();
+
 $router->routeReq();
 
 
