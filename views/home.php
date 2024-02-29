@@ -13,15 +13,23 @@
   </style>
 </head>
 <body>
-    <header class="bg-yellow-300 ">
-       <?php require 'views/includes/header.php'; ?> 
-       <section class="flex flex-col items-center font-black lg:flex-row lg:p-14">
-          <h1 class="uppercase font-inter text-4xl text-center lg:text-6xl lg:text-left ">Manage your customers and invoices easly</h1>
-          <img src="assets/images/header.png" alt="" class="overflow-hidden">
-        </section>
-        <!-- <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="h-20 relative bottom-10 left-14 lg:bottom-24"></div> -->
-    </header>
-    <footer>
-        <?php require 'views/includes/footer.php'; ?>
-    </footer>
+       <?php 
+       $isHomePage = true;
+       require 'views/includes/header.php'; 
+       ?> 
+    <main>
+      <section id="lastInvoices">
+
+      </section>
+      <section id="lastContacts">
+
+      </section>
+      <section id="lastInvoices">
+
+      </section>
+      <section>
+
+      </section>
+    </main>
+    <?php require 'views/includes/footer.php'; ?>
 </body>
