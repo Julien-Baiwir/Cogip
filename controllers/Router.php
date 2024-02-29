@@ -2,8 +2,8 @@
 
 class Router
 {
-    private $_ctrl; // private controller
-    private $_view;
+    private $_ctrl; 
+    // private $_view; on s'occupe de çà en fin de projet, c'est pour masquer les url ou les rendre propres
 
     public function routeReq()
     {
@@ -13,38 +13,34 @@ class Router
             spl_autoload_register(function ($class){
                 require_once('models/' . $class . '.php'); 
             });
-
+    
             $url = '';
-
-            // Le controlleur est inclus selon l'action de l'utilisateur
-            if(isset($_GET['url']))
-            {
-                $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
-
-                $controller = ucfirst(strtolower($url[0])); 
-
-                $controllerClass = "Controller" . $controller;
-
-                $controllerFile = "controllers/" . $controllerClass . ".php";
-
-            if(file_exists($controllerFile))
-                {
-                    require_once($controllerFile);
-                    $this->_ctrl = new $controllerClass($url);
-                }
-                else
-                {
-                    throw new Exception('Page introuvable');
-                }
+    
+            // Si aucune URL spécifique n'est demandée, rediriger vers la page home
+            if (!isset($_GET['url'])) {
+                require_once('views/home.php');
+                return; 
             }
+    
+            // Quand l'utilisateur clique sur un lien, on déclèche la créationd de l'URL qui correspond à une classe précise
+            $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
+    
+            $controller = ucfirst(strtolower($url[0])); // Convertit "companies" en "Companies"
+            $controllerClass = "Controller" . $controller;
+            $controllerFile = "controllers/" . $controllerClass . ".php";
 
+            // La fonction $_GET['url'] est utilisée pour récupérer la partie de l'URL qui est passée en paramètre avec le nom "url". http://localhost/Cogip/index.php?url=companies
+    
+            if(file_exists($controllerFile))
+            {
+                require_once($controllerFile);
+                $this->_ctrl = new $controllerClass($url);
+            }
             else
             {
-                require_once('controllers/ControllerCompanies.php'); 
-                $this->_ctrl = new ControllerCompanies($url); 
+                throw new Exception('Page introuvable');
             }
-            // prévoir tous les controleurs
-
+            
         }
         // Gestion des erreurs
         catch(Exception $e)
@@ -53,4 +49,5 @@ class Router
             require_once('views/viewError.php');
         }
     }
+    
 }
