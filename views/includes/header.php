@@ -14,7 +14,7 @@
                     <li class="block hover:border-black hover:border-2 p-2"><a href="#">Contacts</a></li>
                 </ul>
             </nav>
-            <div class="flex items-end justify-center gap-2">
+            <div class="flex items-end justify-end gap-2">
                 <a href="#" class="p-2 font-semibold bg-white rounded-lg">Sign up</a>
                 <a href="#" class="p-2 font-semibold">Login</a>
             </div>
@@ -26,6 +26,7 @@
         <h1 class="uppercase font-inter text-4xl text-center lg:text-6xl lg:text-left ">Manage your customers and invoices easly</h1>
         <img src="assets/images/header.png" alt="" class="overflow-hidden">
     </section>
+    <?php endif; ?>
     <!-- <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="h-20 relative bottom-10 left-14 lg:bottom-24"></div> -->
 </header>
 
