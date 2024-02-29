@@ -1,6 +1,3 @@
-<?php include('includes/header.php'); ?>
-
-
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -22,8 +19,3 @@ if(isset($fiveCompanies) && is_array($fiveCompanies) && count($fiveCompanies) > 
     echo "<p>Aucune entreprise n'a été trouvée.</p>";
 }
 ?>
-
-
-
-<?php include('includes/footer.php'); ?>
-

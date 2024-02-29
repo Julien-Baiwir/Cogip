@@ -11,3 +11,4 @@ class CompaniesManager extends Model
         //             2) class name of the object to create (here 'Companies')
     }
 }
+

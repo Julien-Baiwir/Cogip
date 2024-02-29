@@ -3,3 +3,4 @@
     <p>Pays: <?= $company->getCountry() ?></p>
     <p>Numéro de TVA: <?= $company->getTva()?></p>
 <?php endforeach; ?>
+

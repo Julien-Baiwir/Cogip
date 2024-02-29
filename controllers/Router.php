@@ -17,10 +17,17 @@ class Router
             $url = '';
     
             // Si aucune URL spécifique n'est demandée, rediriger vers la page home
+            // if (!isset($_GET['url'])) {
+            //     require_once('views/home.php');
+            //     return; 
+            // }
+
             if (!isset($_GET['url'])) {
-                require_once('views/home.php');
+                require_once('controllers/ControllerHome.php');
+                $this->_ctrl = new ControllerHome();
                 return; 
             }
+
     
             // Quand l'utilisateur clique sur un lien, on déclèche la créationd de l'URL qui correspond à une classe précise
             $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));

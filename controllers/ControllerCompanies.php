@@ -16,7 +16,7 @@ class ControllerCompanies {
         // Ici c'est crucial on instancie models/CompaniesManager.php qui contient une fonction publique
 
         $companies = $this->_CompaniesManager->getCompanies();  // on déclare une variable qui est égale à $companies
-        // var_dump($companies);
+        var_dump($companies);
         // require_once('views/companies/index.php');
         require 'views/companies/index.php';
     }
