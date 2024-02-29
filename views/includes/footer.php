@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +16,8 @@
         font-family: 'Roboto', sans-serif;
     }
 </style>
-
 <body>
+
     <footer class="border-t-2 m-8 border-yellow-300">
         <section class="footer flex flex-col lg:flex-row">
             <div class="logo m-5 flex items-center justify-center lg:w-1/2 lg:ml-24 lg:justify-start lg:h-40 lg:mt-24">
@@ -55,15 +54,13 @@
         </section>
         <section class="footer__bottom  text-xs lg:flex lg:items-center lg:justify-between lg:mt-16 lg:items-end">
             <div class="navbar flex flex-wrap justify-center lg:justify-around lg:ml-16">
-            <p class="m-2 lg:text-xl">HOME</p>
-            <p class="m-2 lg:text-xl">INVOICES</p>
-            <p class="m-2 lg:text-xl">COMPANIES</p>
-            <p class="m-2 lg:text-xl">CONTACTS</p>
-            <p class="m-2 lg:text-xl">PRIVACY POLICY</p>
+            <a class="m-2 lg:text-xl hover:font-bold" href="views/home.php">HOME</p>
+            <a class="m-2 lg:text-xl hover:font-bold" href="views/invoices/index.php">INVOICES</p>
+            <a class="m-2 lg:text-xl hover:font-bold" href="views/companies/index.php">COMPANIES</p>
+            <a class="m-2 lg:text-xl hover:font-bold" href="views/contacts/index.php">CONTACTS</p>
+            <a class="m-2 lg:text-xl" >PRIVACY POLICY</p>
         </div>
             <p class="text-xs text-center font-thin lg:text-lg">Copyright © 2022 • COGIP Inc.</p>
         </section>
     </footer>
 </body>
-
-</html>
