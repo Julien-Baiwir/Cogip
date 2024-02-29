@@ -1,23 +1,23 @@
 <?php
 
-class ControllerCompanies{
+class ControllerCompanies {
     private $_CompaniesManager;
-    private $_view;
 
-    public function __construct($url){
-        if (isset($url) && count($url) >1)
-        throw new Exception('Page introuvable');
-    else$this->articles();
+    public function __construct($url) {
+        if (isset($url) && count($url) > 1) {
+            throw new Exception('Page introuvable');
+        } else {
+            $this->companies();
+        }
     }
 
-    private function companies()
-    {
-        $this->companiesManager = new CompaniesManager;
-        $companies = $this->_companiesManager->getCompanies();
+    private function companies() {
+        $this->_CompaniesManager = new CompaniesManager;
+        // Ici c'est crucial on instancie models/CompaniesManager.php qui contient une fonction publique
 
-        require_once('views/companies/index.php');
-
-        // Ici il faudra modifier pour faire une fonction sécuriser.
+        $companies = $this->_CompaniesManager->getCompanies();  // on déclare une variable qui est égale à $companies
+        // var_dump($companies);
+        // require_once('views/companies/index.php');
+        require 'views/companies/index.php';
     }
-
 }
