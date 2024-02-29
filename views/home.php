@@ -21,4 +21,7 @@
         </section>
         <!-- <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="h-20 relative bottom-10 left-14 lg:bottom-24"></div> -->
     </header>
+    <footer>
+        <?php require 'views/includes/footer.php'; ?>
+    </footer>
 </body>
