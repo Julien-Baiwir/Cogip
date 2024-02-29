@@ -9,7 +9,7 @@ class UserModel
 
     public static function getUsername() {
         session_start();
-        return isset($_SESSION['username']) && $_SESSION['username'] : '';
+        return isset($_SESSION['username']) ? $_SESSION['username'] : '';
     }
 }
 ?>

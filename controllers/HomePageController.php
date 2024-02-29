@@ -1,6 +1,8 @@
 <?php
 declare(strict_types = 1);
 
+require 'models/UserModel.php';
+
 class HomepageController
 {
     public function index()
