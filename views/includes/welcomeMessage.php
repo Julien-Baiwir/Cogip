@@ -1,8 +1,8 @@
 <div id="welcome">
     <?php 
-    if ($idLoggedIn) {
+     /* if ($idLoggedIn) {
         $username = UserModel::getUsername();
         echo "<p> Welcome, $username !</p>";
-    }
+    } */
     ?>
 </div>

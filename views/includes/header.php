@@ -5,7 +5,7 @@
         <label for="menu-toggle" class="cursor-pointer lg:hidden block justify-self-end"><svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
         <input class="hidden" type="checkbox" id="menu-toggle" />
 
-        <div id="navbar" class="hidden lg:flex lg:flex-row lg:items-center lg:gap-10 lg:w-auto w-full">
+        <div id="navbar" class="hidden lg:flex lg:flex-row lg:items-center lg:gap-10 lg:w-auto  w-full">
             <nav>
                 <ul class="flex items-end flex-col lg:flex-row lg:items-center lg:justify-center font-semibold">
                     <li class="block hover:border-black hover:border-2 p-2"><a href="#" class="cursor-pointer">Home</a></li>
@@ -27,7 +27,7 @@
         <img src="assets/images/header.png" alt="" class="overflow-hidden">
     </section>
     <?php endif; ?>
-    <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="w-4/5 relative bottom-10 left-14 lg:w-full lg:bottom-22"></div>
+    <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="w-4/5 relative bottom-[3.25rem] left-[3.5rem] lg:w-11/12 lg:bottom-[5rem] lg:left-[5rem]"></div>
 </header>
 
 
