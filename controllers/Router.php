@@ -3,7 +3,7 @@
 class Router
 {
     private $_ctrl; 
-    // private $_view; on s'occupe de çà en fin de projet, c'est pour masquer les url ou les rendre propres
+    private $_view; 
 
     public function routeReq()
     {

@@ -1,7 +1,10 @@
 <?php
+require_once ('views/View.php');
+
 class ControllerHome {
 
     private $_HomeManager;
+    private $_view;
 
     public function __construct() {
         $this->_HomeManager = new HomeManager();
@@ -9,9 +12,12 @@ class ControllerHome {
     }
 
     private function displayHome() {
-        $fiveCompanies = $this->_HomeManager->getFiveCompanies();  // Récupérer les données des cinq entreprises
+        $fiveCompanies = $this->_HomeManager->getFiveCompanies();  
         // var_dump($fiveCompanies);
-        require 'views/home.php';  // Inclure la vue home.php en transmettant la variable $fiveCompanies
+        // require 'views/viewHome.php'; 
+
+        $this->_view = new View('Home');
+        $this->_view->generate(array('fiveCompanies' => $fiveCompanies ));
     }
 }
 
