@@ -11,13 +11,13 @@ class ControllerHome {
         $this->displayHome();
     }
 
-    private function displayHome() {
+    private function displayHome() {     
         $fiveCompanies = $this->_HomeManager->getFiveCompanies();  
-        // var_dump($fiveCompanies);
-        // require 'views/viewHome.php'; 
-
+        
         $this->_view = new View('Home');
         $this->_view->generate(array('fiveCompanies' => $fiveCompanies ));
+
+        // require 'views/viewHome.php'; 
     }
 }
 
