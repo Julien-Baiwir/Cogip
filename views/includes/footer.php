@@ -55,7 +55,7 @@
         <section class="footer__bottom  text-xs lg:flex lg:items-center lg:justify-between lg:mt-16 lg:items-end">
             <div class="navbar flex flex-wrap justify-center lg:justify-around lg:ml-16">
             <a class="m-2 lg:text-xl hover:font-bold" href="views/home.php">HOME</p>
-            <a class="m-2 lg:text-xl hover:font-bold" href="views/invoices/index.php">INVOICES</p>
+            <a class="m-2 lg:text-xl hover:font-bold" href="/invoices/index.html"id="invoices-link">INVOICES</p>
             <a class="m-2 lg:text-xl hover:font-bold" href="views/companies/index.php">COMPANIES</p>
             <a class="m-2 lg:text-xl hover:font-bold" href="views/contacts/index.php">CONTACTS</p>
             <a class="m-2 lg:text-xl" >PRIVACY POLICY</p>

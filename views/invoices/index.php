@@ -42,39 +42,39 @@
                             <td class="border px-4 py-2 font-semibold w-1/6">Ligne 1, Colonne 2</td>
                             <td class="border px-4 py-2 font-semibold w-1/6">Ligne 1, Colonne 3</td>
                             <td class="border px-4 py-2 font-semibold w-1/6">Ligne 1, Colonne 4</td>
-                            <td class="border px-4 py-2 font-semibold w-1/6">Ligne 1, Colonne 5</td>
+                            <td class="border px-4 py-2 font-semibold w-1/6"></td>
                             <td class="border px-4 py-2 font-semibold w-1/6"></td>
                         </tr>
                         <tr>
                             <td class="border px-4 py-2 font-semibold">Ligne 2, Colonne 1</td>
                             <td class="border px-4 py-2 font-semibold">Ligne 2, Colonne 2</td>
                             <td class="border px-4 py-2 font-semibold">Ligne 2, Colonne 3</td>
-                            <td class="border px-4 py-2 font-semibold">Ligne 1, Colonne 4</td>
-                            <td class="border px-4 py-2 font-semibold">Ligne 1, Colonne 5</td>
+                            <td class="border px-4 py-2 font-semibold">Ligne 2, Colonne 4</td>
+                            <td class="border px-4 py-2 font-semibold"></td>
                             <td class="border px-4 py-2 font-semibold w-1/6"></td>
                         </tr>
                         <tr>
                             <td class="border px-4 py-2 font-semibold">Ligne 3, Colonne 1</td>
                             <td class="border px-4 py-2 font-semibold">Ligne 3, Colonne 2</td>
                             <td class="border px-4 py-2 font-semibold">Ligne 3, Colonne 3</td>
-                            <td class="border px-4 py-2 font-semibold">Ligne 1, Colonne 4</td>
-                            <td class="border px-4 py-2 font-semibold">Ligne 1, Colonne 5</td>
+                            <td class="border px-4 py-2 font-semibold">Ligne 3, Colonne 4</td>
+                            <td class="border px-4 py-2 font-semibold"></td>
                             <td class="border px-4 py-2 font-semibold w-1/6"></td>
                         </tr>
                         <tr>
                             <td class="border px-4 py-2 font-semibold">Ligne 4, Colonne 1</td>
                             <td class="border px-4 py-2 font-semibold">Ligne 4, Colonne 2</td>
                             <td class="border px-4 py-2 font-semibold">Ligne 4, Colonne 3</td>
-                            <td class="border px-4 py-2 font-semibold">Ligne 1, Colonne 4</td>
-                            <td class="border px-4 py-2 font-semibold">Ligne 1, Colonne 5</td>
+                            <td class="border px-4 py-2 font-semibold">Ligne 4, Colonne 4</td>
+                            <td class="border px-4 py-2 font-semibold"></td>
                             <td class="border px-4 py-2 font-semibold w-1/6"></td>
                         </tr>
                         <tr>
                             <td class="border px-4 py-2 font-semibold">Ligne 5, Colonne 1</td>
                             <td class="border px-4 py-2 font-semibold">Ligne 5, Colonne 2</td>
                             <td class="border px-4 py-2 font-semibold">Ligne 5, Colonne 3</td>
-                            <td class="border px-4 py-2 font-semibold">Ligne 1, Colonne 4</td>
-                            <td class="border px-4 py-2 font-semibold">Ligne 1, Colonne 5</td>
+                            <td class="border px-4 py-2 font-semibold">Ligne 5, Colonne 4</td>
+                            <td class="border px-4 py-2 font-semibold"></td>
                             <td class="border px-4 py-2 font-semibold w-1/6"></td>
                         </tr>
                         <!-- Répétez cette structure pour les autres lignes -->

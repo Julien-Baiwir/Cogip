@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/src/output.css">
     <title>Cogip</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#invoices-link").click(function(e){
+        e.preventDefault();
+        $("#main-content").empty().load("/invoices/index.php");
+    });
+});
+</script>
 
     <style>
       #menu-toggle:checked + #navbar {
@@ -23,15 +32,7 @@
     </header>
     <main id="main-content">
     <!-- Le contenu de votre page sera chargé ici -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("#invoices-link").click(function(e){
-        e.preventDefault();
-        $("#main-content").load("/invoices/index.php");
-    });
-});
-</script>
+
 </main>
     <footer>
         <?php require 'views/includes/footer.php'; ?>
