@@ -1,22 +1,24 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
-
-<?php
 if(isset($fiveCompanies) && is_array($fiveCompanies) && count($fiveCompanies) > 0) {
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Name</th>";
+    echo "<th>TVA</th>";
+    echo "<th>Country</th>";
+ 
+    echo "<th>Created at</th>";
+    echo "</tr>";
     foreach($fiveCompanies as $fivecomp) {
 ?>
-
-        <h2><?= $fivecomp->getName() ?></h2>
-        <p>Pays: <?= $fivecomp->getCountry() ?></p>
-        <p>Numéro de TVA: <?= $fivecomp->getTva() ?></p>
-       
+    <tr>
+        <td><?= $fivecomp->getName() ?></td>
+        <td><?= $fivecomp->getTva() ?></td>
+        <td><?= $fivecomp->getCountry() ?></td>
+        <td><?= $fivecomp->getCreated_at() ?></td>
+    </tr>
 <?php
-    }
-} else {
-    echo "<p>Aucune entreprise n'a été trouvée.</p>";
+        }
+    echo "</table>";
 }
 ?>
 

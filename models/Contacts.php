@@ -58,15 +58,17 @@ class Contacts
         if (preg_match('/^[0-9]{3}-[0-9]{4}$/', $phone))
             $this->_phone = $phone;
     }
+   
     public function setCreated_at($created_at)
     {
         $date = DateTime::createFromFormat('Y-m-d H:i:s', $created_at);
         if ($date !== false && $date->format('Y-m-d H:i:s') === $created_at) {
-            $this->_created_at = $date->format('Y-m-d H:i:s');
+            $this->_created_at = $date->format('d-m-Y'); // Modifier le format de sortie ici
         } else {
             throw new Exception("Invalid datetime format. The expected format is 'Y-m-d H:i:s'.");
         }
     }
+
     public function setUpdate_At($update_at)
     {
         $date = DateTime::createFromFormat('Y-m-d H:i:s', $update_at);
