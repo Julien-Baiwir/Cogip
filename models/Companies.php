@@ -9,7 +9,10 @@ class Companies {
     private $_tva;
     private $_created_at;
     private $_update_at;
-   
+
+   private $_type_name;
+
+
     // Constructor
     public function __construct(array $data) {
         foreach ($data as $key => $value) {
@@ -21,6 +24,14 @@ class Companies {
     }
 
     // Setters
+
+    public function setType_name($type_name) {
+        if (is_string($type_name)) {
+            $this->_type_name = $type_name;
+        }
+    }
+
+
     public function setId($id) {
         $id = (int) $id;
         if ($id > 0) {
@@ -70,6 +81,12 @@ class Companies {
     }
 
     // Getters
+
+    public function getType_name() {
+        return $this->_type_name;
+    }
+
+    
     public function getId() {
         return $this->_id;
     }

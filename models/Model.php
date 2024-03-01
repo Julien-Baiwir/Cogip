@@ -24,18 +24,35 @@ abstract class Model
     }
 
      //PARTIE 2 RECUPERE LES DATAS DANS LA OU LES TABLES (paramètre 1 ),  CREE UN OBJET OU SONT MISES LES DATAS(paramètre 2 )
-    protected function getAll($table, $obj)
-    {
-        $var =[];
+    // protected function getAll($table, $obj)
+    // {
+    //     $var =[];
         
-        $req = $this->getBdd()->prepare('SELECT * FROM ' .$table. ' ORDER BY id desc');
+    //     $req = $this->getBdd()->prepare('SELECT * FROM ' .$table. ' ORDER BY id desc');
+    //     $req->execute();
+
+    //     while($data = $req->fetch(PDO::FETCH_ASSOC))
+    //     {
+    //         $var[] = new $obj($data);
+    //     }
+    //     return $var;
+    //     $req->closeCursor();
+    // }
+
+    protected function getCompaniesWithTypes($obj)
+    {
+        $sql = 'SELECT companies.*, types.name AS type_name FROM companies ' .
+        'INNER JOIN types ON companies.type_id = types.id ' .
+        'ORDER BY companies.id DESC';
+
+        $var = [];
+        $req = $this->getBdd()->prepare($sql);
         $req->execute();
 
-        while($data = $req->fetch(PDO::FETCH_ASSOC))
-        {
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $var[] = new $obj($data);
         }
+
         return $var;
-        $req->closeCursor();
     }
 }
