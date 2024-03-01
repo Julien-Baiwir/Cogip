@@ -11,7 +11,7 @@
     </style>
         <style>
         footer {
-            border-top: 2px solid orange; /* Ajoute une bordure orange en haut du footer */
+            border-top: 2px solid orange; 
         }
     </style>
 </head>
