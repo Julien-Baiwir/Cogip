@@ -1,6 +1,6 @@
 <?php
 
-// ce fichier permet de sécusier les view des différentes pages
+// Ce fichier permet de gérer les vues des différentes pages
 
 class View
 {
@@ -9,35 +9,34 @@ class View
 
     public function __construct($action)
     {
-        $this->_file ='views/view'.$action .'php';
+        $this->_file = 'views/view'.$action .'.php';
     }
 
- // genere et affiche la vue
-    private function generate($data)
+    // Génère et affiche la vue
+    public function generate($data)
     {
-        //Partie spécifique de la vue
+        // Partie spécifique de la vue
         $content = $this->generateFile($this->_file, $data);
 
-        //TEMPLATE
-        $view = $this->generateFile('view/template.php', array('t'=> $this->_t, 'content' => $content));
+        // Modèle
+        $view = $this->generateFile('views/includes/template.php', array('t'=> $this->_t, 'content' => $content));
         echo $view;
     }
 
-    // genere un fichier vue et renvoie le résultat produit
+    // Génère un fichier vue et renvoie le résultat produit
     private function generateFile($file , $data)
     {
         if(file_exists($file))
         {
             extract($data);
             ob_start();
-
-            //INCLUT LE FICHIER VUE
+            // Inclut le fichier vue
             require $file;
             return ob_get_clean();
         }
         else 
-        throw new Exception('Fichier' .$file. 'introuvable');
+        {
+            throw new Exception('Fichier ' .$file. ' introuvable');
+        }
     }
-    
-
 }
