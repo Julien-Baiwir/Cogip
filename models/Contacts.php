@@ -2,6 +2,61 @@
 
 class Contacts
 {
+    private $_name;
+    private $_company_id;
+
+    // Constructor
+    public function __construct(array $data)
+    {
+        // Vérifier si le tableau contient les clés nécessaires
+        if (isset($data['name']) && isset($data['company_id'])) {
+            // Appeler les méthodes correspondantes pour définir les propriétés
+            $this->setName($data['name']);
+            $this->setCompanyId($data['company_id']);
+        } else {
+            throw new InvalidArgumentException('Invalid data array. "name" and "company_id" keys are required.');
+        }
+    }
+
+    public function setName($name)
+    {
+        if (is_string($name)) {
+            $this->_name = $name;
+        } else {
+            throw new InvalidArgumentException('Name must be a string value.');
+        }
+    }
+
+    public function setCompanyId($company_id)
+    {
+        if (is_numeric($company_id)) {
+            $this->_company_id = (int) $company_id;
+        } else {
+            throw new InvalidArgumentException('Company ID must be a numeric value.');
+        }
+    }
+
+    // Getter for name
+    public function getName()
+    {
+        return $this->_name;
+    }
+
+    // Getter for company_id
+    public function getCompanyId()
+    {
+        return $this->_company_id;
+    }
+}
+
+
+
+
+
+<?php
+
+class Contacts
+{
 
     private $_id;
     private $_name;
