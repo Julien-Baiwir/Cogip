@@ -89,5 +89,23 @@ protected function getContactsWithCompanies($obj)
     return $var;
 }
     
-    
+protected function getContactsWithCompanies($obj)
+{
+    $sql = "SELECT name, company_id FROM contacts";
+
+    $contacts = [];
+
+    $stmt = $this->getBdd()->prepare($sql);
+    $stmt->execute();
+
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        var_dump($row); // Affiche le contenu du tableau associatif
+        $contacts[] = new $obj($row);
+    }
+
+    return $contacts;
+}
+
+
+
 }
