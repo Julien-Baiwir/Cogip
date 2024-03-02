@@ -12,6 +12,11 @@ class HomeManager extends Model
 
     }
 
+    public function getFiveContacts()
+    {
+        return $this->getContactsWithCompanies('Contacts');
+    }
+
 }
 
 

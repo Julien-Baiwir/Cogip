@@ -22,10 +22,32 @@ if(isset($fiveInvoices) && is_array($fiveInvoices) && count($fiveInvoices) > 0) 
     }
     echo "</table>";
 }
-
 //Contacts
+if (!empty($fivecontacts)) {
+    echo "<h2>All contacts</h2>";
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Name</th>";
+    echo "<th>Email</th>";
+    echo "<th>Phone</th>";
+    echo "<th>Company</th>";
+    echo "<th>Created at</th>";
+    echo "</tr>";
 
+    foreach ($fivecontacts as $contact) {
+        echo "<tr>";
+        echo "<td>" . $contact->getName() . "</td>";
+        echo "<td>" . $contact->getEmail() . "</td>";
+        echo "<td>" . $contact->getPhone() . "</td>";
+        echo "<td>" . $contact->getCompanyName() . "</td>";
+        echo "<td>" . $contact->getCreatedAt() . "</td>";
+        echo "</tr>";
+    }
 
+    echo "</table>";
+} else {
+    echo "<p>No contacts available</p>";
+}
 
 
 

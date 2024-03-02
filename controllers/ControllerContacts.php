@@ -20,7 +20,6 @@ class ControllerContacts
     {
 
         $contacts = $this->_ContactsManager->getContacts();
-        var_dump($contacts);
         $this->_view = new View('Contacts');
         $this->_view->generate(array('contacts' => $contacts ));
 

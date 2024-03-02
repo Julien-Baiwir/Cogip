@@ -15,7 +15,7 @@ if(isset($contacts) && is_array($contacts) && count($contacts) > 0): ?>
                 <td><?= $contact->getPhone() ?></td>
                 <td><?= $contact->getEmail() ?></td>
                 <td><?= $contact->getCompanyName() ?></td>
-                <td><?= $contact->getCreated_at() ?></td>
+                <td><?= $contact->getCreatedAt() ?></td>
             </tr>
         <?php endforeach; ?>
     </table>

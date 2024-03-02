@@ -18,21 +18,6 @@ abstract class Model
         }
         return self::$_bdd;
     }
- 
-    // protected function getAll($table, $obj)
-    // {
-    //     $var =[];
-        
-    //     $req = $this->getBdd()->prepare('SELECT * FROM ' .$table. ' ORDER BY id desc');
-    //     $req->execute();
-
-    //     while($data = $req->fetch(PDO::FETCH_ASSOC))
-    //     {
-    //         $var[] = new $obj($data);
-    //     }
-    //     return $var;
-    //     $req->closeCursor();
-    // }
 
 // COMPANIES
     protected function getCompaniesWithTypes($obj)
@@ -71,12 +56,14 @@ abstract class Model
     
         return $var;
     }
+
 // CONTACTS
 protected function getContactsWithCompanies($obj)
 {
-    $sql = "SELECT name, company_id, email, phone, created_at
+    $sql = "SELECT contacts.*, companies.name AS company_name
             FROM contacts
-            ORDER BY created_at DESC";
+            JOIN companies ON contacts.company_id = companies.id
+            ORDER BY contacts.created_at DESC";
 
     $var = [];
     $req = $this->getBdd()->prepare($sql);
@@ -88,24 +75,28 @@ protected function getContactsWithCompanies($obj)
 
     return $var;
 }
-    
-protected function getContactsWithCompanies($obj)
-{
-    $sql = "SELECT name, company_id FROM contacts";
 
-    $contacts = [];
+// protected function getCompaniesDetails($obj)
+// {
+//     $sql = "SELECT companies.*, invoices.*, types.name AS type_name, contacts.name AS contact_name 
+//             FROM companies
+//             INNER JOIN types ON companies.type_id = types.id
+//             LEFT JOIN invoices ON companies.id = invoices.id_company
+//             LEFT JOIN contacts ON companies.id = contacts.company_id";
 
-    $stmt = $this->getBdd()->prepare($sql);
-    $stmt->execute();
+//     $var = [];
+//     $req = $this->getBdd()->prepare($sql);
+//     $req->execute();
 
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        var_dump($row); // Affiche le contenu du tableau associatif
-        $contacts[] = new $obj($row);
-    }
+//     while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+//         $var[] = new $obj($data);
+//     }
 
-    return $contacts;
+//     return $var;
+// }
+
+
+
 }
 
 
-
-}

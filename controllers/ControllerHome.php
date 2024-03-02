@@ -14,9 +14,9 @@ class ControllerHome {
     private function displayHome() {     
         $fiveCompanies = $this->_HomeManager->getFiveCompanies();  
         $fiveInvoices = $this->_HomeManager->getFiveInvoices();
-        
+        $fivecontacts = $this->_HomeManager->getFiveContacts();
         $this->_view = new View('Home');
-        $this->_view->generate(array('fiveCompanies' => $fiveCompanies, 'fiveInvoices' => $fiveInvoices));
+        $this->_view->generate(array('fiveCompanies' => $fiveCompanies, 'fiveInvoices' => $fiveInvoices,'fivecontacts'=> $fivecontacts ));
     }
 }
 
