@@ -4,7 +4,7 @@ require ('views/View.php');
 class ControllerInvoices{
 
     private $_invoicesManager;
-    private $view;
+    private $_view;
 
     public function __construct($url)
     {

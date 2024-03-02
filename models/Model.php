@@ -23,7 +23,7 @@ abstract class Model
         return self::$_bdd;
     }
 
-     //PARTIE 2 RECUPERE LES DATAS DANS LA OU LES TABLES (paramètre 1 ),  CREE UN OBJET OU SONT MISES LES DATAS(paramètre 2 )
+     
     // protected function getAll($table, $obj)
     // {
     //     $var =[];
@@ -41,9 +41,11 @@ abstract class Model
 
     protected function getCompaniesWithTypes($obj)
     {
-        $sql = 'SELECT companies.*, types.name AS type_name FROM companies ' .
-        'INNER JOIN types ON companies.type_id = types.id ' .
-        'ORDER BY companies.id DESC';
+        $sql = "SELECT companies.*, types.name AS type_name 
+         FROM companies,types 
+         WHERE companies.type_id = types.id 
+         ORDER BY companies.id DESC";
+
 
         $var = [];
         $req = $this->getBdd()->prepare($sql);
@@ -55,4 +57,24 @@ abstract class Model
 
         return $var;
     }
+
+    protected function getInvoicesWithCompanies($obj)
+    {
+        $sql = "SELECT invoices.*, companies.name AS company_name
+                FROM invoices
+                JOIN companies ON invoices.id_company = companies.id
+                ORDER BY invoices.created_at DESC";
+    
+        $var = [];
+        $req = $this->getBdd()->prepare($sql);
+        $req->execute();
+    
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $var[] = new $obj($data);
+        }
+    
+        return $var;
+    }
+    
+    
 }

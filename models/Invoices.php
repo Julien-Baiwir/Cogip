@@ -5,11 +5,12 @@ class Invoices
 
     private $_id;
     private $_ref;
-    private $created_at;
-    private $update_at;
-    private $id_company;
+    private $_created_at; 
+    private $_update_at; 
+    private $_id_company; 
+    private $_company_name;
 
-    // Constructor
+
     public function __construct(array $data)
     {
         foreach ($data as $key => $value) {
@@ -20,9 +21,8 @@ class Invoices
         }
     }
 
-    // Setters === ===
+// SETTERS
 
-    //set id
     public function setId($id) {
         $id = (int) $id;
         if ($id > 0) {
@@ -30,7 +30,6 @@ class Invoices
         }
     }
 
-    //set ref
     public function setRef($ref){
 
         if(is_string($ref)){
@@ -38,54 +37,48 @@ class Invoices
         }
     }
 
-    //set created_at
-    public function setCreated_at($dateCreated){
-
-        $this->created_at = $dateCreated;
+    public function setCreated_at($created_at)
+    {
+        $date = DateTime::createFromFormat('Y-m-d H:i:s', $created_at);
+        $this->_created_at = $date->format('d-m-Y');
     }
 
-    //set update_at
-    public function setUpdate_at($dateUptade){
-
-        $this->update_at = $dateUptade;
+    public function setUpdate_at($dateUpdate) {
+        $date = DateTime::createFromFormat('Y-m-d H:i:s', $dateUpdate);
+        $this->_update_at = $date->format('d-m-Y');
     }
-
-    //set id_company
+    
     public function setId_Company($id) {
         $id = (int) $id;
         if ($id > 0) {
-            $this->id_company = $id; // Utilisez la propriété id_company ici
+            $this->_id_company = $id; 
         }
     }
 
-    // getters === ===
-
-    //get id
-    public function getId(){
-
-        $id = $this->_id;
-        return $id;
+    public function setCompany_name($companyName) {
+        if (is_string($companyName)) {
+            $this->_company_name = $companyName;
+        }
     }
 
-    //get ref
-    public function getRef(){
+       // GETTERS
+   public function getId() {
+    return $this->_id;
+   }
 
-        $ref = $this->_ref;
-        return $ref;
+   public function getRef() {
+    return $this->_ref;
     }
 
-    //get created_at
-    public function getCreated_at(){
-
-        $dateCreated = $this->created_at;
-        return $dateCreated;
-    }
-    
-    //get update_at
-    public function getUpdate_at(){
-
-        $dateUptade = $this->update_at;
-        return $dateUptade;
+    public function getCreated_at() {
+    return $this->_created_at;
     }
 
+    public function getUpdate_at() {
+    return $this->_update_at;
+    }
+
+    public function getCompany_name() {
+    return $this->_company_name;
+    }
 }

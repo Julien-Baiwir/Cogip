@@ -1,5 +1,5 @@
 <?php
-require_once ('views/View.php');
+require_once('views/View.php');
 
 class ControllerHome {
 
@@ -13,13 +13,13 @@ class ControllerHome {
 
     private function displayHome() {     
         $fiveCompanies = $this->_HomeManager->getFiveCompanies();  
+        $fiveInvoices = $this->_HomeManager->getFiveInvoices();
         
         $this->_view = new View('Home');
-        $this->_view->generate(array('fiveCompanies' => $fiveCompanies ));
-
-        // require 'views/viewHome.php'; 
+        $this->_view->generate(array('fiveCompanies' => $fiveCompanies, 'fiveInvoices' => $fiveInvoices));
     }
 }
+
 
 
 
