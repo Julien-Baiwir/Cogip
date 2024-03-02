@@ -11,6 +11,8 @@ class Contacts
     private $_created_at;
     private $_update_at;
 
+    private $_company_name; 
+
     // Constructor
     public function __construct(array $data)
     {
@@ -47,6 +49,12 @@ class Contacts
         }
     }
 
+    public function setCompanyName($company_name)
+    {
+        if (is_string($company_name))
+            $this->_company_name = $company_name;
+    }
+
     public function setEmail($email)
     {
         if (is_string($email))
@@ -69,7 +77,7 @@ class Contacts
         }
     }
 
-    public function setUpdate_At($update_at)
+    public function setUpdate_at($update_at)
     {
         $date = DateTime::createFromFormat('Y-m-d H:i:s', $update_at);
         if ($date !== false && $date->format('Y-m-d H:i:s') === $update_at) {
@@ -84,36 +92,41 @@ class Contacts
     public function getId()
     {
         return $this->_id;
-    }                 // Getter for `$_id`
+    }              
 
     public function getName()
     {
         return $this->_name;
-    }             // Getter for `$_name`
+    }            
 
     public function getCompanyId()
     {
         return $this->_company_id;
-    }   // Getter for `$_company_id`
+    }   
 
     public function getEmail()
     {
         return $this->_email;
-    }           // Getter for `$_email`
+    }        
 
     public function getPhone()
     {
         return $this->_phone;
-    }           // Getter for `$_phone`
+    }         
 
     public function getCreated_at()
     {
         return $this->_created_at;
-    }   // Getter for `$_created_at`
+    }   
 
-    public function getUpdateAt()
+    public function getUpdate_at()
     {
         return $this->_update_at;
-    }     // Getter for `$_update_at`
+    }   
+    
+    public function getCompanyName()
+    {
+        return $this->_company_name;
+    }
 
 }

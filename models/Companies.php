@@ -75,7 +75,7 @@ class Companies {
 }
 
 
-    public function setUpdate_dat($update_at) {
+    public function setUpdate_at($update_at) {
         // voir le format de date
         $this->_update_at = $update_at;
     }
@@ -111,7 +111,7 @@ class Companies {
         return $this->_created_at;
     }
 
-    public function getUpdate_dat() {
+    public function getUpdate_at() {
         return $this->_update_at;
     }
 }

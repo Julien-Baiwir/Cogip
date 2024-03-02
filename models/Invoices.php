@@ -8,6 +8,7 @@ class Invoices
     private $_created_at; 
     private $_update_at; 
     private $_id_company; 
+    
     private $_company_name;
 
 

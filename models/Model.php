@@ -1,13 +1,9 @@
 <?php
 
-// class abstraite qui ne peut pas être instancié, c'est d'autres classes qui seront"extend" qui
-//pourront être instanciées et prendre les propriétés de la class Model
-// C'est model de base qui servira pour tous les autres models
 abstract class Model
 {
     private static $_bdd;
 
-    //PARTIE 1 CONNEXION A LA BDD
     private static function setBdd(){
         self::$_bdd = new PDO('mysql:localhost;dbname=cogip;charset=utf8', 'root', 'root84$');// identifiant et mot de passe à changer
         self::$_bdd->exec('USE cogip');
@@ -22,8 +18,7 @@ abstract class Model
         }
         return self::$_bdd;
     }
-
-     
+ 
     // protected function getAll($table, $obj)
     // {
     //     $var =[];
@@ -39,6 +34,7 @@ abstract class Model
     //     $req->closeCursor();
     // }
 
+// COMPANIES
     protected function getCompaniesWithTypes($obj)
     {
         $sql = "SELECT companies.*, types.name AS type_name 
@@ -57,7 +53,7 @@ abstract class Model
 
         return $var;
     }
-
+// INVOICES
     protected function getInvoicesWithCompanies($obj)
     {
         $sql = "SELECT invoices.*, companies.name AS company_name
@@ -75,6 +71,23 @@ abstract class Model
     
         return $var;
     }
+// CONTACTS
+protected function getContactsWithCompanies($obj)
+{
+    $sql = "SELECT name, company_id, email, phone, created_at
+            FROM contacts
+            ORDER BY created_at DESC";
+
+    $var = [];
+    $req = $this->getBdd()->prepare($sql);
+    $req->execute();
+
+    while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        $var[] = new $obj($data);
+    }
+
+    return $var;
+}
     
     
 }
