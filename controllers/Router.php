@@ -23,11 +23,6 @@ class Router
                 return; 
             }
 
-            // if ($url[0] === 'details') {
-            //     require_once('controllers/ControllerDetails.php');
-            //     $this->_ctrl = new ControllerDetails($url);
-            //     return;
-            // }
 
             $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
     

@@ -76,22 +76,16 @@ protected function getContactsWithCompanies($obj)
     return $var;
 }
 
-// protected function getCompaniesDetails($obj)
+// Companies details
+// protected function getDetailsCompanies($obj)
 // {
-//     $sql = "SELECT companies.*, invoices.*, types.name AS type_name, contacts.name AS contact_name 
-//             FROM companies
-//             INNER JOIN types ON companies.type_id = types.id
-//             LEFT JOIN invoices ON companies.id = invoices.id_company
-//             LEFT JOIN contacts ON companies.id = contacts.company_id";
-
+//     $sql = "SELECT * FROM companies";
+//     $stmt = $this->getBdd()->query($sql);
 //     $var = [];
-//     $req = $this->getBdd()->prepare($sql);
-//     $req->execute();
-
-//     while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-//         $var[] = new $obj($data);
+//     while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
+//         $company = new $obj($data);
+//         $var[] = $company;
 //     }
-
 //     return $var;
 // }
 
