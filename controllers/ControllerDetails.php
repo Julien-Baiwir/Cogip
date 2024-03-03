@@ -1,4 +1,5 @@
 <?php
+
 class ControllerDetails
 {
     public function __construct($url)
@@ -10,15 +11,19 @@ class ControllerDetails
         $companyId = $url[1];
 
         try {
-           
             $detailsCompaniesManager = new DetailsCompaniesManager();
 
-       
-            $company = $detailsCompaniesManager->getCompanyById($companyId);
+            // Fetch company details
+            $company = $detailsCompaniesManager->getDetailsCompany($companyId);
+            
+            // Fetch company contacts
+            $contacts = $detailsCompaniesManager->getDetailsContacts($companyId);
+           
+            $invoices= $detailsCompaniesManager->getDetailsInvoices($companyId);
 
-            if ($company) {
-          
+            if ($company && $contacts && $invoices) {
                 require_once('ok.php');
+                
             } else {
                 throw new Exception('Company not found');
             }
@@ -27,7 +32,9 @@ class ControllerDetails
         }
     }
 }
+
 ?>
+
 
 
 
