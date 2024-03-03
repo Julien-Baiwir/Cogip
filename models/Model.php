@@ -1,11 +1,11 @@
 <?php
-
+//CONNECT DB
 abstract class Model
 {
     private static $_bdd;
 
     private static function setBdd(){
-        self::$_bdd = new PDO('mysql:localhost;dbname=cogip;charset=utf8', 'root', 'root84$');// identifiant et mot de passe à changer
+        self::$_bdd = new PDO('mysql:localhost;dbname=cogip;charset=utf8', 'root', 'root84$');// identifiant et mot de passe 
         self::$_bdd->exec('USE cogip');
         self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     
@@ -57,7 +57,7 @@ abstract class Model
         return $var;
     }
 
-// CONTACTS
+// CONTACTS 
 protected function getContactsWithCompanies($obj)
 {
     $sql = "SELECT contacts.*, companies.name AS company_name

@@ -16,11 +16,6 @@ class Router
     
             $url = '';
     
-            // Si aucune URL spécifique n'est demandée, rediriger vers la page home
-            // if (!isset($_GET['url'])) {
-            //     require_once('views/home.php');
-            //     return; 
-            // }
 
             if (!isset($_GET['url'])) {
                 require_once('controllers/ControllerHome.php');
@@ -28,15 +23,19 @@ class Router
                 return; 
             }
 
-    
-            // Quand l'utilisateur clique sur un lien, on déclèche la créationd de l'URL qui correspond à une classe précise
+            // if ($url[0] === 'details') {
+            //     require_once('controllers/ControllerDetails.php');
+            //     $this->_ctrl = new ControllerDetails($url);
+            //     return;
+            // }
+
             $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
     
-            $controller = ucfirst(strtolower($url[0])); // Convertit "companies" en "Companies"
+            $controller = ucfirst(strtolower($url[0])); 
             $controllerClass = "Controller" . $controller;
             $controllerFile = "controllers/" . $controllerClass . ".php";
 
-            // La fonction $_GET['url'] est utilisée pour récupérer la partie de l'URL qui est passée en paramètre avec le nom "url". http://localhost/Cogip/index.php?url=companies
+            
     
             if(file_exists($controllerFile))
             {

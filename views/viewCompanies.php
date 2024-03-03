@@ -11,6 +11,7 @@ if(isset($companies) && is_array($companies) && count($companies) > 0): ?>
         </tr>
         <?php foreach($companies as $company): ?>
             <tr>
+                 <td><a href="?details=<?= urlencode($company->getName()) ?>"><?= $company->getName() ?></a></td>
                 <td><?= $company->getName() ?></td>
                 <td><?= $company->getTva() ?></td>
                 <td><?= $company->getCountry() ?></td>
