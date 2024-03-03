@@ -9,24 +9,27 @@ class ControllerDetails
 
         $companyId = $url[1];
 
-        $detailsCompaniesManager = new DetailsCompaniesManager();
-
         try {
-        
+           
+            $detailsCompaniesManager = new DetailsCompaniesManager();
+
+       
             $company = $detailsCompaniesManager->getCompanyById($companyId);
 
             if ($company) {
-                require_once('ok.php'); // Inclure la vue ok.php
+          
+                require_once('ok.php');
             } else {
                 throw new Exception('Company not found');
             }
         } catch (Exception $e) {
-            // Gérer les erreurs
             echo "Error: " . $e->getMessage();
         }
     }
 }
 ?>
+
+
 
 
 

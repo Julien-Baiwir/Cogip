@@ -5,8 +5,8 @@ abstract class Model
     private static $_bdd;
 
     private static function setBdd(){
-        self::$_bdd = new PDO('mysql:localhost;dbname=cogip;charset=utf8', 'root', 'root84$');// identifiant et mot de passe 
-        self::$_bdd->exec('USE cogip');
+        self::$_bdd = new PDO('mysql:localhost;dbname=cogip2;charset=utf8', 'root', 'root84$');// identifiant et mot de passe 
+        self::$_bdd->exec('USE cogip2');
         self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     
     }
@@ -76,19 +76,40 @@ protected function getContactsWithCompanies($obj)
     return $var;
 }
 
-// Companies details
-// protected function getDetailsCompanies($obj)
-// {
-//     $sql = "SELECT * FROM companies";
-//     $stmt = $this->getBdd()->query($sql);
-//     $var = [];
-//     while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
-//         $company = new $obj($data);
-//         $var[] = $company;
-//     }
-//     return $var;
-// }
+// CONMPAGNIES DETAILS
+protected function getCompanyDetailsById($companyId)
+{
+    $sql = "SELECT 
+        companies.*, 
+        types.name AS type_name,
+        contacts.name AS contact_name,
+        contacts.email AS contact_email,
+        contacts.phone AS contact_phone,
+        invoices.ref AS invoice_ref,
+        invoices.created_at AS invoice_created_at,
+        invoices.update_at AS invoice_update_at
+    FROM 
+        companies
+    LEFT JOIN 
+        types ON companies.type_id = types.id
+    LEFT JOIN 
+        contacts ON companies.id = contacts.company_id
+    LEFT JOIN 
+        invoices ON companies.id = invoices.id_company
+    WHERE 
+        companies.id = :id";
 
+    $companyDetails = [];
+    $req = $this->getBdd()->prepare($sql);
+    $req->bindValue(':id', $companyId, PDO::PARAM_INT);
+    $req->execute();
+
+    while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        $companyDetails[] = $data;
+    }
+    var_dump($companyDetails);
+    return $companyDetails;
+}
 
 
 }
