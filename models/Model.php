@@ -1,7 +1,8 @@
 <?php
-//CONNECT DB
+
 abstract class Model
 {
+//CONNECT DB
     private static $_bdd;
 
     private static function setBdd(){
@@ -19,7 +20,8 @@ abstract class Model
         return self::$_bdd;
     }
 
-// COMPANIES
+
+// COMPANIES  -> CompaniesManager.php
     protected function getCompaniesWithTypes($obj)
     {
         $sql = "SELECT companies.*, types.name AS type_name 
@@ -38,7 +40,7 @@ abstract class Model
 
         return $var;
     }
-// INVOICES
+// INVOICES -> InvoicesManager.php
     protected function getInvoicesWithCompanies($obj)
     {
         $sql = "SELECT invoices.*, companies.name AS company_name
