@@ -1,8 +1,8 @@
 <?php
 require_once ('views/View.php');
 
-class ControllerCompanies {
-
+class ControllerCompanies 
+{
     private $_CompaniesManager;
     private $_view;
 
@@ -22,6 +22,5 @@ class ControllerCompanies {
         $this->_view = new View('Companies');
         $this->_view->generate(array('companies' => $companies ));
 
-        // require 'views/viewCompanies.php';
     }
 }

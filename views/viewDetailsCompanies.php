@@ -1,8 +1,6 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
-
 ?>
 
 <?php foreach ($detailsCompanies  as $detailsCompany): ?>
@@ -15,11 +13,13 @@ ini_set('display_errors', 1);
 
 <h2>Contact people</h2>
 
-<?php foreach ($detailsContacts  as $detailsContact): ?>
-    <p><?php echo $detailsContact->getName(); ?></p>
+<?php foreach ($detailsContacts as $detailsContact): ?>
+    <p>
+        <a href="index.php?url=detailscontacts&id=<?php echo $detailsContact->getId(); ?>">
+            <?php echo $detailsContact->getName(); ?>
+        </a>
+    </p>
 <?php endforeach; ?>
-
-
 
 <h2>Last invoices</h2>
 

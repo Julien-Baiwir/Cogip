@@ -1,5 +1,5 @@
 <?php 
-if(isset($companies) && is_array($companies) && count($companies) > 0): ?>
+if(isset($companies)): ?>
     <h2>All companies</h2>
     <table>
         <tr>

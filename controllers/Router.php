@@ -14,15 +14,15 @@ class Router
                 require_once('models/' . $class . '.php'); 
             });
     
+
+            // Gestion des URLs
             $url = '';
     
-
             if (!isset($_GET['url'])) {
                 require_once('controllers/ControllerHome.php');
                 $this->_ctrl = new ControllerHome();
                 return; 
             }
-
 
             $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
     
@@ -31,7 +31,6 @@ class Router
             $controllerFile = "controllers/" . $controllerClass . ".php";
 
             
-    
             if(file_exists($controllerFile))
             {
                 require_once($controllerFile);
@@ -43,7 +42,7 @@ class Router
             }
             
         }
-        // Gestion des erreurs
+        // Si URLs non valides
         catch(Exception $e)
         {
             $errorMsg = $e->getMessage();
