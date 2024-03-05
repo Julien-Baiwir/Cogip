@@ -13,17 +13,14 @@ class ControllerDetails
         try {
             $detailsCompaniesManager = new DetailsCompaniesManager();
 
-            // Fetch company details
-            $company = $detailsCompaniesManager->getDetailsCompany($companyId);
-            
-            // Fetch company contacts
-            $contacts = $detailsCompaniesManager->getDetailsContacts($companyId);
-           
-            $invoices= $detailsCompaniesManager->getDetailsInvoices($companyId);
+          
+            $detailsCompanies = $detailsCompaniesManager->getDetailsCompany($companyId);
+            $detailsContacts = $detailsCompaniesManager->getDetailsContacts($companyId);
+            $detailsInvoices = $detailsCompaniesManager->getDetailsInvoices($companyId);
 
-            if ($company && $contacts && $invoices) {
+          
+            if ($detailsCompanies && $detailsContacts && $detailsInvoices  ) {
                 require_once('ok.php');
-                
             } else {
                 throw new Exception('Company not found');
             }
@@ -33,7 +30,12 @@ class ControllerDetails
     }
 }
 
+
 ?>
+
+
+
+ 
 
 
 

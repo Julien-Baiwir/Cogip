@@ -2,7 +2,7 @@
 
 abstract class Model
 {
-//CONNECT DB
+//CONNECT DB 
     private static $_bdd;
 
     private static function setBdd(){
@@ -40,6 +40,7 @@ abstract class Model
 
         return $var;
     }
+
 // INVOICES -> InvoicesManager.php
     protected function getInvoicesWithCompanies($obj)
     {
@@ -59,7 +60,7 @@ abstract class Model
         return $var;
     }
 
-// CONTACTS 
+// CONTACTS -> ContactsManager.php
 protected function getContactsWithCompanies($obj)
 {
     $sql = "SELECT contacts.*, companies.name AS company_name
@@ -79,37 +80,39 @@ protected function getContactsWithCompanies($obj)
 }
 
 
-// juste company
-protected function getCompanyDetailsById($companyId)
+// COMPANY DETAIL -> DetailsCompaniesManager.php
+protected function getCompanyDetailsById($companyId, $obj)
 {
     $sql = "SELECT 
-        companies.*, 
-        types.name AS type_name
-    FROM 
-        companies
-    LEFT JOIN 
-        types ON companies.type_id = types.id
-    WHERE 
-        companies.id = :id";
+                companies.*, 
+                types.name AS type_name
+            FROM 
+                companies
+            LEFT JOIN 
+                types ON companies.type_id = types.id
+            WHERE 
+                companies.id = :companyId";
 
+    $companiesDetails = [];
     $req = $this->getBdd()->prepare($sql);
-    $req->bindValue(':id', $companyId, PDO::PARAM_INT);
+    $req->bindValue(':companyId', $companyId, PDO::PARAM_INT);
     $req->execute();
 
-    // On récupère le résultat dans une variable
-    $companyDetails = $req->fetch(PDO::FETCH_ASSOC);
+    while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        $companiesDetails[] = new $obj($data);
+    }
 
-    var_dump($companyDetails);
-    return $companyDetails;
+    return $companiesDetails;
 }
 
-// juste contacts
-protected function getCompanyContactsById($companyId)
+// CONTACT DETAIL -> DetailsCompaniesManager.php 
+protected function getCompanyContactsById($companyId, $obj)
 {
     $sql = "SELECT 
-                contacts.name AS contact_name,
-                contacts.email AS contact_email,
-                contacts.phone AS contact_phone
+                contacts.id AS id,
+                contacts.name AS name,
+                contacts.email AS email,
+                contacts.phone AS phone
             FROM 
                 companies
             LEFT JOIN 
@@ -121,18 +124,17 @@ protected function getCompanyContactsById($companyId)
     $req->bindValue(':id', $companyId, PDO::PARAM_INT);
     $req->execute();
 
-    $companyDetails = [];
+    $companyContacts = [];
 
-    while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
-        $companyDetails[] = $row;
+    while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        $companyContacts[] = new $obj($data);
     }
 
-    var_dump($companyDetails);
-    return $companyDetails;
+    return $companyContacts;
 }
 
-// invoices
-protected function getCompanyInvoicesById($companyId)
+// INVOICE DETAIL -> DetailsCompaniesManager.php
+protected function getCompanyInvoicesById($companyId, $obj)
 {
     $sql = "SELECT 
                 invoices.ref AS invoice_ref,
@@ -149,88 +151,15 @@ protected function getCompanyInvoicesById($companyId)
     $req->bindValue(':id', $companyId, PDO::PARAM_INT);
     $req->execute();
 
-    $companyDetails = [];
+    $companyInvoices = [];
 
-    while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
-        $companyDetails[] = $row;
+    while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        $companyInvoices [] = new $obj($data);
     }
 
-    var_dump($companyDetails);
-    return $companyDetails;
-}
+    return $companyInvoices ;
 }
 
+}
 
-
-////////AVEC OBJET//////////////////////////////////////////////
-// protected function getCompanyDetailsById($companyId, $obj)
-// {
-//     $sql = "SELECT 
-//         companies.*, 
-//         types.name AS type_name,
-//         contacts.name AS contact_name,
-//         contacts.email AS contact_email,
-//         contacts.phone AS contact_phone,
-//         invoices.ref AS invoice_ref,
-//         invoices.created_at AS invoice_created_at,
-//         invoices.update_at AS invoice_update_at
-//     FROM 
-//         companies
-//     LEFT JOIN 
-//         types ON companies.type_id = types.id
-//     LEFT JOIN 
-//         contacts ON companies.id = contacts.company_id
-//     LEFT JOIN 
-//         invoices ON companies.id = invoices.id_company
-//     WHERE 
-//         companies.id = :id";
-
-//     $companyDetails = [];
-//     $req = $this->getBdd()->prepare($sql);
-//     $req->bindValue(':id', $companyId, PDO::PARAM_INT);
-//     $req->execute();
-
-//     while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-      
-//         $companyDetails[] = new $obj($data);
-//     }
-//     var_dump($companyDetails);
-//     return $companyDetails;
-// }
-
-
-
-// ancience fonction trop grosse
-// protected function getCompanyDetailsById($companyId)
-// {
-//     $sql = "SELECT 
-//         companies.*, 
-//         types.name AS type_name,
-//         contacts.name AS contact_name,
-//         contacts.email AS contact_email,
-//         contacts.phone AS contact_phone,
-//         invoices.ref AS invoice_ref,
-//         invoices.created_at AS invoice_created_at,
-//         invoices.update_at AS invoice_update_at
-//     FROM 
-//         companies
-//     LEFT JOIN 
-//         types ON companies.type_id = types.id
-//     LEFT JOIN 
-//         contacts ON companies.id = contacts.company_id
-//     LEFT JOIN 
-//         invoices ON companies.id = invoices.id_company
-//     WHERE 
-//         companies.id = :id";
-
-//     $req = $this->getBdd()->prepare($sql);
-//     $req->bindValue(':id', $companyId, PDO::PARAM_INT);
-//     $req->execute();
-
- 
-//     $companyDetails = $req->fetch(PDO::FETCH_ASSOC);
-
-//     var_dump($companyDetails);
-//     return $companyDetails;
-// }
 
