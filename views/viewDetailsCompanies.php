@@ -19,7 +19,12 @@ ini_set('display_errors', 1);
             <?php echo $detailsContact->getName(); ?>
         </a>
     </p>
+    <p>ID: <?php echo $detailsContact->getId(); ?></p>
+    <p>Email: <?php echo $detailsContact->getEmail(); ?></p>
+    <p>Phone: <?php echo $detailsContact->getPhone(); ?></p>
+    <p>Company Name: <?php echo $detailsContact->getCompanyName(); ?></p>
 <?php endforeach; ?>
+
 
 <h2>Last invoices</h2>
 

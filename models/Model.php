@@ -112,7 +112,8 @@ protected function getCompanyContactsById($companyId, $obj)
                 contacts.id AS id,
                 contacts.name AS name,
                 contacts.email AS email,
-                contacts.phone AS phone
+                contacts.phone AS phone,
+                companies.name AS company_name
             FROM 
                 companies
             LEFT JOIN 
