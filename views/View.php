@@ -1,7 +1,5 @@
 <?php
 
-// Ce fichier permet de gérer les vues des différentes pages
-
 class View
 {
     private $_file;

@@ -21,7 +21,7 @@ abstract class Model
     }
 
 
-// COMPANIES  -> CompaniesManager.php
+// COMPANIES  -> CompaniesManager.php / HomeManager.php
     protected function getCompaniesWithTypes($obj)
     {
         $sql = "SELECT companies.*, types.name AS type_name 
@@ -41,7 +41,7 @@ abstract class Model
         return $var;
     }
 
-// INVOICES -> InvoicesManager.php
+// INVOICES -> InvoicesManager.php / HomeManager.php
     protected function getInvoicesWithCompanies($obj)
     {
         $sql = "SELECT invoices.*, companies.name AS company_name
@@ -60,7 +60,7 @@ abstract class Model
         return $var;
     }
 
-// CONTACTS -> ContactsManager.php
+// CONTACTS -> ContactsManager.php / HomeManager.php
 protected function getContactsWithCompanies($obj)
 {
     $sql = "SELECT contacts.*, companies.name AS company_name
@@ -161,6 +161,7 @@ protected function getCompanyInvoicesById($companyId, $obj)
     return $companyInvoices ;
 }
 
+// Profile -> ProfileManager.php
 protected function getProfileById($profileId, $obj)
 {
     $sql = "SELECT 

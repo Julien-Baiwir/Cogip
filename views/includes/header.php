@@ -24,9 +24,9 @@
             <li><a href="index.php?url=companies">Companies</a></li>
             <li><a href="index.php?url=contacts">Contacts</a></li>
             <li><a href="index.php?url=invoices">Invoices</a></li>
-            <li><a href="index.php?url=home">Dashboard</a></li>
-            <li><a href="index.php?url=home">Sign up</a></li>
-            <li><a href="index.php?url=home">Login</a></li>
+            <li><a href="index.php?url=login">Dashboard</a></li>
+            <li><a href="index.php?url=login">Sign up</a></li>
+            <li><a href="index.php?url=login">Login</a></li>
         </ul>
     </nav>
 </header>
