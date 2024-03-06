@@ -1,5 +1,5 @@
 <?php
-require_once ('views/View.php');
+require_once ('views/includes/View.php');
 
 class ControllerContacts
 {

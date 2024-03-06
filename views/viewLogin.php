@@ -14,5 +14,12 @@
         <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Connexion">
     </form>
+    <div>
+    <br><br>  
+    <p>Dashboard:</p> 
+    <p><a href="index.php?url=dashboard">Jesus Christ</a></p>
+    <p><a href="index.php?url=dashboard">Jean-Michel Delacompta</a></p>
+    </div> 
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-require ('views/View.php');
+require_once ('views/includes/View.php');
 
 class ControllerInvoices{
 
