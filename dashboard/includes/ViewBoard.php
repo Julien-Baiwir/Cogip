@@ -1,6 +1,6 @@
 <?php
 
-class ViewDashboard
+class Viewboard
 {
     private $_file;
     private $_t;
