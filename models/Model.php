@@ -161,6 +161,37 @@ protected function getCompanyInvoicesById($companyId, $obj)
     return $companyInvoices ;
 }
 
+protected function getProfileById($profileId, $obj)
+{
+    $sql = "SELECT 
+                contacts.id AS id,
+                contacts.name AS name,
+                contacts.email AS email,
+                contacts.phone AS phone,
+                companies.name AS company_name
+            FROM 
+                contacts
+            LEFT JOIN 
+                companies ON contacts.company_id = companies.id
+            WHERE 
+                contacts.id = :id";
+
+    $req = $this->getBdd()->prepare($sql);
+    $req->bindValue(':id', $profileId, PDO::PARAM_INT);
+    $req->execute();
+
+    $profileDetails = [];
+
+    while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        $profileDetails[] = new $obj($data);
+    }
+
+    return $profileDetails;
 }
+
+}
+
+
+
 
 

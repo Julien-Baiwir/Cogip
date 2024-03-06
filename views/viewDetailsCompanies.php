@@ -15,7 +15,7 @@ ini_set('display_errors', 1);
 
 <?php foreach ($detailsContacts as $detailsContact): ?>
     <p>
-        <a href="index.php?url=detailscontacts&id=<?php echo $detailsContact->getId(); ?>">
+     <a href="index.php?url=profile/<?php echo $detailsContact->getId(); ?>">
             <?php echo $detailsContact->getName(); ?>
         </a>
     </p>
@@ -33,5 +33,8 @@ ini_set('display_errors', 1);
     <p><?php echo $detailsInvoice ->getCreatedAt(); ?></p>
     <p><?php echo $detailsInvoice ->getUpdatedAt(); ?></p>
 <?php endforeach; ?>
+
+
+
 
 
