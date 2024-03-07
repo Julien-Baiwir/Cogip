@@ -1,1 +1,1 @@
-<h2>contacts</h2>
+<h2>new contact</h2>

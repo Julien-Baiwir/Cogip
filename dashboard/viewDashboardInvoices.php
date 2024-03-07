@@ -1,1 +1,1 @@
-<h2>invoices</h2>
+<h2>new invoice</h2>
