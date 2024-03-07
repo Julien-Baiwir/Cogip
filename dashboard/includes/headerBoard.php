@@ -6,19 +6,19 @@
     <title>Dashboard</title>
     <style>
         header {
-            border-bottom: 2px solid orange; 
+            border-bottom: 2px solid blue; 
         }
     </style>
     <style>
         footer {
-            border-top: 2px solid orange; 
+            border-top: 2px solid blue; 
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h2>Welcome back Username!</h2>
+    <h2>Welcome back!</h2>
      <nav>
         <ul>
             <li><a href="index.php?url=dashboard">Dashboard</a></li>

@@ -8,15 +8,15 @@
 <body>
     <h2>Login</h2>
     <form action="login.php" method="post">
-        <label for="username">Nom :</label><br>
+        <label for="username">Username:</label><br>
         <input type="text" id="username" name="username"><br>
-        <label for="password">Mot de passe :</label><br>
+        <label for="password">Password :</label><br>
         <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Connexion">
     </form>
     <div>
     <br><br>  
-    <p>Dashboard:</p> 
+    <p>Users:</p> 
     <p><a href="index.php?url=dashboard">Jesus Christ</a></p>
     <p><a href="index.php?url=dashboard">Jean-Michel Delacompta</a></p>
     </div> 
