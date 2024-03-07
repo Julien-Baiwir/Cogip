@@ -19,21 +19,37 @@ ini_set('display_errors', 1);
             <?php echo $detailsContact->getName(); ?>
         </a>
     </p>
-    <p>ID: <?php echo $detailsContact->getId(); ?></p>
-    <p>Email: <?php echo $detailsContact->getEmail(); ?></p>
-    <p>Phone: <?php echo $detailsContact->getPhone(); ?></p>
-    <p>Company Name: <?php echo $detailsContact->getCompanyName(); ?></p>
 <?php endforeach; ?>
 
 
 <h2>Last invoices</h2>
 
-<?php foreach ($detailsInvoices  as $detailsInvoice ): ?>
-    <p><?php echo $detailsInvoice ->getRef(); ?></p>
-    <p><?php echo $detailsInvoice ->getCreatedAt(); ?></p>
-    <p><?php echo $detailsInvoice ->getUpdatedAt(); ?></p>
-<?php endforeach; ?>
-
+<table>
+    <thead>
+        <tr>
+            <th>Invoice Number</th>
+            <th>Date de mise à jour</th>
+            <th>Company</th>
+            <th>Created at</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($detailsInvoices as $detailsInvoice): ?>
+            <tr>
+                <td><?php echo $detailsInvoice->getRef(); ?></td>
+                <td><?php echo $detailsInvoice->getUpdatedAt(); ?></td>
+                <td>
+                    <?php
+                    foreach ($detailsCompanies as $detailsCompany) {
+                            $companyName = $detailsCompany->getCompanyName(); }
+                    echo $companyName;
+                    ?>
+                </td>
+                <td><?php echo $detailsInvoice->getCreatedAt(); ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
 
 
 

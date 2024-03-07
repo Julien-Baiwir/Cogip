@@ -22,54 +22,22 @@ abstract class Model
 
 
 // COMPANIES  -> CompaniesManager.php / HomeManager.php
-    protected function getCompaniesWithTypes($obj)
-    {
-        $sql = "SELECT companies.*, types.name AS type_name 
-         FROM companies,types 
-         WHERE companies.type_id = types.id 
-         ORDER BY companies.id DESC";
-
-
-        $var = [];
-        $req = $this->getBdd()->prepare($sql);
-        $req->execute();
-
-        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-            $var[] = new $obj($data);
-        }
-
-        return $var;
-    }
-
-// INVOICES -> InvoicesManager.php / HomeManager.php
-    protected function getInvoicesWithCompanies($obj)
-    {
-        $sql = "SELECT invoices.*, companies.name AS company_name
-                FROM invoices
-                JOIN companies ON invoices.id_company = companies.id
-                ORDER BY invoices.created_at DESC";
-    
-        $var = [];
-        $req = $this->getBdd()->prepare($sql);
-        $req->execute();
-    
-        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-            $var[] = new $obj($data);
-        }
-    
-        return $var;
-    }
-
-// CONTACTS -> ContactsManager.php / HomeManager.php
-protected function getContactsWithCompanies($obj)
+protected function getCompaniesWithTypes($obj, $limit = null)
 {
-    $sql = "SELECT contacts.*, companies.name AS company_name
-            FROM contacts
-            JOIN companies ON contacts.company_id = companies.id
-            ORDER BY contacts.created_at DESC";
+    $sql = "SELECT companies.*, types.name AS type_name 
+             FROM companies
+             INNER JOIN types ON companies.type_id = types.id 
+             ORDER BY companies.created_at DESC";
+
+    if ($limit !== null) {
+        $sql .= " LIMIT :limit";
+    }
 
     $var = [];
     $req = $this->getBdd()->prepare($sql);
+    if ($limit !== null) {
+        $req->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
+    }
     $req->execute();
 
     while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
@@ -78,6 +46,62 @@ protected function getContactsWithCompanies($obj)
 
     return $var;
 }
+
+
+
+// INVOICES -> InvoicesManager.php / HomeManager.php
+protected function getInvoicesWithCompanies($obj, $limit = null)
+{
+    $sql = "SELECT invoices.*, companies.name AS company_name
+            FROM invoices
+            JOIN companies ON invoices.id_company = companies.id
+            ORDER BY invoices.created_at DESC";
+
+    if ($limit !== null) {
+        $sql .= " LIMIT :limit";
+    }
+
+    $var = [];
+    $req = $this->getBdd()->prepare($sql);
+    if ($limit !== null) {
+        $req->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
+    }
+    $req->execute();
+
+    while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        $var[] = new $obj($data);
+    }
+
+    return $var;
+}
+
+
+// CONTACTS -> ContactsManager.php / HomeManager.php
+protected function getContactsWithCompanies($obj, $limit = null)
+{
+    $sql = "SELECT contacts.*, companies.name AS company_name
+            FROM contacts
+            JOIN companies ON contacts.company_id = companies.id
+            ORDER BY contacts.created_at DESC";
+
+    if ($limit !== null) {
+        $sql .= " LIMIT :limit";
+    }
+
+    $var = [];
+    $req = $this->getBdd()->prepare($sql);
+    if ($limit !== null) {
+        $req->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
+    }
+    $req->execute();
+
+    while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        $var[] = new $obj($data);
+    }
+
+    return $var;
+}
+
 
 
 // COMPANY DETAIL -> DetailsCompaniesManager.php
@@ -146,7 +170,10 @@ protected function getCompanyInvoicesById($companyId, $obj)
             LEFT JOIN 
                 invoices ON companies.id = invoices.id_company
             WHERE 
-                companies.id = :id";
+                companies.id = :id
+            ORDER BY 
+                invoices.update_at DESC
+            LIMIT 5";
 
     $req = $this->getBdd()->prepare($sql);
     $req->bindValue(':id', $companyId, PDO::PARAM_INT);
@@ -157,9 +184,10 @@ protected function getCompanyInvoicesById($companyId, $obj)
     while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
         $companyInvoices [] = new $obj($data);
     }
-
-    return $companyInvoices ;
+ 
+    return $companyInvoices;
 }
+
 
 // Profile -> ProfileManager.php
 protected function getProfileById($profileId, $obj)
@@ -189,6 +217,29 @@ protected function getProfileById($profileId, $obj)
 
     return $profileDetails;
 }
+
+protected function getStatistics()
+{
+    $statistics = [];
+
+    $sqlInvoices = "SELECT COUNT(*) AS total_invoices FROM invoices";
+    $reqInvoices = $this->getBdd()->prepare($sqlInvoices);
+    $reqInvoices->execute();
+    $statistics['total_invoices'] = $reqInvoices->fetch(PDO::FETCH_ASSOC)['total_invoices'];
+
+    $sqlContacts = "SELECT COUNT(*) AS total_contacts FROM contacts";
+    $reqContacts = $this->getBdd()->prepare($sqlContacts);
+    $reqContacts->execute();
+    $statistics['total_contacts'] = $reqContacts->fetch(PDO::FETCH_ASSOC)['total_contacts'];
+
+    $sqlCompanies = "SELECT COUNT(*) AS total_companies FROM companies";
+    $reqCompanies = $this->getBdd()->prepare($sqlCompanies);
+    $reqCompanies->execute();
+    $statistics['total_companies'] = $reqCompanies->fetch(PDO::FETCH_ASSOC)['total_companies'];
+
+    return $statistics;
+}
+
 
 }
 

@@ -1,5 +1,5 @@
 <?php
-class HomeManager extends Model
+class DashboardManager extends Model
 {
     public function getFiveCompanies()
     {
@@ -17,10 +17,9 @@ class HomeManager extends Model
         return $this->getContactsWithCompanies('Contacts', 5);
     }
 
+    public function getStats()
+    {
+        return $this->getStatistics();
+    }
+
 }
-
-
-
-
-
-

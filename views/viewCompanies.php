@@ -14,7 +14,6 @@ if(isset($companies)): ?>
   
 
                 <td><a href="index.php?url=details/<?= $company->getID() ?>"><?= $company->getName() ?></a></td>
-                <td><?= $company->getName() ?></td>
                 <td><?= $company->getTva() ?></td>
                 <td><?= $company->getCountry() ?></td>
                 <td><?= $company->getType_name() ?></td>
