@@ -18,6 +18,7 @@
 <body>
 
 <header>
+    <h2>Welcome back Username!</h2>
      <nav>
         <ul>
             <li><a href="index.php?url=dashboard">Dashboard</a></li>
