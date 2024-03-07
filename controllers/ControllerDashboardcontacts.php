@@ -2,7 +2,7 @@
 
 require_once ('dashboard/includes/ViewBoard.php');
 
-class ControllerDashboardcompanies {
+class ControllerDashboardcontacts {
     private $_view;
 
     public function __construct() {
@@ -10,7 +10,7 @@ class ControllerDashboardcompanies {
     }
 
     private function displayDashboard() {     
-        $this->_view = new ViewBoard('DashboardCompanies');
+        $this->_view = new ViewBoard('DashboardContacts');
         $this->_view->generate(array()); 
     }
 }
