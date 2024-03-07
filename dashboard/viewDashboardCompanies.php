@@ -1,1 +1,1 @@
-<h2>new companie</h2>
+<h2>new company</h2>
