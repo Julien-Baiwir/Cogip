@@ -218,6 +218,8 @@ protected function getProfileById($profileId, $obj)
     return $profileDetails;
 }
 
+// Dashboard Statistics
+
 protected function getStatistics()
 {
     $statistics = [];
@@ -239,6 +241,15 @@ protected function getStatistics()
 
     return $statistics;
 }
+
+// Dashboard Companies
+// COMPANIES  -> CompaniesManager.php / HomeManager.php
+
+
+// Dashboard Contacts
+
+
+// Dashboard Invoices
 
 
 }
