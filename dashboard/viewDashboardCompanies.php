@@ -1,6 +1,8 @@
 <h2>New Company</h2>
 
-<form action="index.php?url=dashboard/addCompany" method="POST">
+<h2>Testcomp	BE0485335485  Belgium	Supplier	15-03-2024</h2>
+
+<form action="index.php?url=dashboardcompanies/addCompany" method="POST">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br><br>
 

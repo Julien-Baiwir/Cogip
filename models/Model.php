@@ -244,6 +244,25 @@ protected function getStatistics()
 
 // Dashboard Companies
 // COMPANIES  -> CompaniesManager.php / HomeManager.php
+protected function insertNewCompany($name, $tva, $country, $type_id)
+{
+    $sql = "INSERT INTO companies (name, tva, country, type_id, created_at, update_at) 
+            VALUES (:name, :tva, :country, :type_id, NOW(), NOW())";
+
+    $data = [
+        'name' => $name,
+        'tva' => $tva,
+        'country' => $country,
+        'type_id' => $type_id
+    ];
+
+    $req = $this->getBdd()->prepare($sql);
+    foreach ($data as $key => $value) {
+        $req->bindValue(":$key", $value);
+    }
+
+    return $req->execute();
+}
 
 
 // Dashboard Contacts
