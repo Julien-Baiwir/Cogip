@@ -21,13 +21,17 @@
         </div>
     </section>
     <!-- home page header -->
-    <?php if ($isHomePage): ?>
+    <?php 
+    $currentPage = isset($_GET['url']) ? $_GET['url'] : '';
+    $isHomePage = ($currentPage == 'home');
+
+    if ($isHomePage): ?>
     <section class="flex flex-col items-center font-black lg:flex-row lg:p-14 p-8" id="homepage">
         <p class="uppercase font-inter text-4xl text-center lg:text-6xl lg:text-left">Manage your customers and invoices easly</p>
         <img src="assets/images/header.png" alt="" class="overflow-hidden">
     </section>
     <?php endif; ?>
-    <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="w-4/5 relative bottom-[3.25rem] left-[3.5rem] lg:w-11/12 lg:bottom-[5rem] lg:left-[5rem]"></div>
+    <!-- <div class="absolute"><img src="assets/images/rectangle.svg" alt="" class="w-4/5 relative bottom-[3.25rem] left-[3.5rem] lg:w-11/12 lg:bottom-[5rem] lg:left-[5rem]"></div> -->
 </header>
 
 

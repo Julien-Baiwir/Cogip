@@ -20,10 +20,6 @@
   </style>
 </head>
 <body>
-       <?php 
-       $isHomePage = true;
-       require 'views/includes/header.php'; 
-       ?> 
     <main>
       <section class="flex justify-center py-10 ">
         <!-- aperçu du message d'accueil (code mis en commentaire dans: welcomeMessage.php et HomePageController.php) -->
@@ -51,10 +47,10 @@
               if(isset($fiveInvoices) && is_array($fiveInvoices) && count($fiveInvoices) > 0) {
                   foreach($fiveInvoices as $invoice) { ?>
                   <tr>
-                      <td><?= $invoice->getRef() ?></td>
-                      <td><?= $invoice->getUpdate_at() ?></td>
-                      <td><?= $invoice->getCompany_name() ?></td>
-                      <td><?= $invoice->getCreated_at() ?></td>
+                      <td class="p-2"><?= $invoice->getRef() ?></td>
+                      <td class="p-2"><?= $invoice->getUpdate_at() ?></td>
+                      <td class="p-2"><?= $invoice->getCompany_name() ?></td>
+                      <td class="p-2"><?= $invoice->getCreated_at() ?></td>
                   </tr>
             <?php } } else {
               echo "<p>No invoices available</p>";
@@ -75,11 +71,11 @@
               if(!empty($fivecontacts)) { 
                 foreach ($fivecontacts as $contact) {?>
                   <tr>
-                      <td><?= $contact->getName() ?></td>
-                      <td><?= $contact->getPhone() ?></td>
-                      <td><?= $contact->getEmail() ?></td>
-                      <td><?= $contact->getCompaniesName() ?></td>
-                      <td><?= $contact->getCreatedAt() ?></td>
+                      <td class="p-2"><?= $contact->getName() ?></td>
+                      <td class="p-2"><?= $contact->getPhone() ?></td>
+                      <td class="p-2"><?= $contact->getEmail() ?></td>
+                      <td class="p-2"><?= $contact->getCompanyName() ?></td>
+                      <td class="p-2"><?= $contact->getCreatedAt() ?></td>
                   </tr>
             <?php } } else {
               echo "<p>No contact available</p>";
@@ -100,11 +96,11 @@
               if(isset($fiveCompagnies) && is_array($fiveCompagnies) && count($fiveCompagnies) > 0) {
                   foreach($fiveCompagnies as $fivecomp) { ?>
                   <tr>
-                      <td><?= $fivecomp->getName() ?></td>
-                      <td><?= $fivecomp->getTVA() ?></td>
-                      <td><?= $fivecomp->getCountry() ?></td>
-                      <td><?= $fivecomp->getType_name() ?></td>
-                      <td><?= $fivecomp->getCreated_At() ?></td>
+                      <td class="p-2"><?= $fivecomp->getName() ?></td>
+                      <td class="p-2"><?= $fivecomp->getTVA() ?></td>
+                      <td class="p-2"><?= $fivecomp->getCountry() ?></td>
+                      <td class="p-2"><?= $fivecomp->getType_name() ?></td>
+                      <td class="p-2"><?= $fivecomp->getCreated_At() ?></td>
                   </tr>
             <?php } } else {
               echo "<p>No compagnies available</p>";
@@ -117,5 +113,4 @@
         <img src="assets/images/homepage.png" alt="" class="overflow-hidden">
       </section>
     </main>
-    <?php require 'views/includes/footer.php'; ?>
 </body>
