@@ -8,7 +8,10 @@ class Companies {
     private $_country;
     private $_tva;
     private $_created_at;
-    private $_update_dat;
+    private $_update_at;
+
+   private $_type_name;
+
 
     // Constructor
     public function __construct(array $data) {
@@ -21,6 +24,14 @@ class Companies {
     }
 
     // Setters
+
+    public function setType_name($type_name) {
+        if (is_string($type_name)) {
+            $this->_type_name = $type_name;
+        }
+    }
+
+
     public function setId($id) {
         $id = (int) $id;
         if ($id > 0) {
@@ -53,17 +64,29 @@ class Companies {
         }
     }
 
-    public function setCreatedAt($created_at) {
-        // voir le format de date
-        $this->_created_at = $created_at;
+    public function setCreated_at($created_at)
+{
+    $date = DateTime::createFromFormat('Y-m-d H:i:s', $created_at);
+    if ($date !== false && $date->format('Y-m-d H:i:s') === $created_at) {
+        $this->_created_at = $date->format('d-m-Y'); 
+    } else {
+        throw new Exception("Invalid datetime format. The expected format is 'Y-m-d H:i:s'.");
     }
+}
 
-    public function setUpdateDat($update_dat) {
+
+    public function setUpdate_at($update_at) {
         // voir le format de date
-        $this->_update_dat = $update_dat;
+        $this->_update_at = $update_at;
     }
 
     // Getters
+
+    public function getType_name() {
+        return $this->_type_name;
+    }
+
+    
     public function getId() {
         return $this->_id;
     }
@@ -84,12 +107,12 @@ class Companies {
         return $this->_tva;
     }
 
-    public function getCreatedAt() {
+    public function getCreated_at() {
         return $this->_created_at;
     }
 
-    public function getUpdateDat() {
-        return $this->_update_dat;
+    public function getUpdate_at() {
+        return $this->_update_at;
     }
 }
 
