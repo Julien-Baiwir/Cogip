@@ -20,20 +20,20 @@
   </style>
 </head>
 <body>
-    <h2>Login</h2>
-    <form action="login.php" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password :</label><br>
-        <input type="password" id="password" name="password"><br><br>
-        <input type="submit" value="Connexion">
+  <main class='p-12'>
+    <h2 class='text-center'>Login</h2>
+    <form action="login.php" method="post" class='flex flex-col justify-center items-center'>
+        <label for="username">Username:
+        <input type="text" id="username" name="username" placeholder='enter your name'></label>
+        <label for="password">Password :
+        <input type="password" id="password" name="password" placeholder='enter your password'></label>
+        <input type="submit" value="Connexion" class='border black'>
     </form>
     <div>
-    <br><br>  
     <p>Users:</p> 
-    <p><a href="index.php?url=dashboard">Jesus Christ</a></p>
-    <p><a href="index.php?url=dashboard">Jean-Michel Delacompta</a></p>
-    </div> 
-
+      <p><a href="index.php?url=dashboard">Jesus Christ</a></p>
+      <p><a href="index.php?url=dashboard">Jean-Michel Delacompta</a></p>
+    </div>     
+  </main>
 </body>
 </html>

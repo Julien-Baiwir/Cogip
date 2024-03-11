@@ -28,7 +28,7 @@
         <?php 
         if(isset($contacts) && is_array($contacts) && count($contacts) > 0): ?>
             <div class="relative ">
-                <h1 class="text-6xl font-extrabold z-10 relative ml-32">All companies</h1>
+                <h1 class="text-6xl font-extrabold z-10 relative ml-32">All Contacts</h1>
                 <div class="w-80 h-7 absolute inset-0 bg-yellow-300 z-0" style="top:40px; left: 275px;"></div> <!-- Ajout de left: 50px; -->
             </div>
             <div class="search flex justify-end mr-32">
