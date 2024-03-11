@@ -30,15 +30,13 @@
         <div id="welcome" class="text-xl bg-yellow-300 p-5 rounded-3xl shadow-md shadow-yellow-500"> 
           <p class="">Welcome, <span class="font-bold">username</span> !</p>
         </div>
-
         <?php
         /* if ($isLoggedIn) {
            require 'views/includes/welcomeMessage.php';
          } */
         ?>
-        
-
       </section>
+      
       <section class="flex items-center flex-col gap-10 py-10">
         <div id="lastInvoices" class="w-4/5">
           <h2 class="font-inter text-5xl font-black py-10">Last Invoices</h2>

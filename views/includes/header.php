@@ -8,15 +8,15 @@
         <div id="navbar" class="hidden lg:flex lg:flex-row lg:items-center lg:gap-10 lg:w-auto  w-full">
             <nav>
                 <ul class="flex items-end flex-col lg:flex-row lg:items-center lg:justify-center font-semibold">
-                    <li class="block hover:border-black hover:border-2 p-2"><a href="#" class="cursor-pointer">Home</a></li>
-                    <li class="block hover:border-black hover:border-2 p-2"><a href="#" class="cursor-pointer">Invoices</a></li>
-                    <li class="block hover:border-black hover:border-2 p-2"><a href="#" class="cursor-pointer">Compagnies</a></li>
-                    <li class="block hover:border-black hover:border-2 p-2"><a href="#" class="cursor-pointer">Contacts</a></li>
+                    <li class="block hover:border-black hover:border-2 p-2"><a href="index.php?url=home" class="cursor-pointer">Home</a></li>
+                    <li class="block hover:border-black hover:border-2 p-2"><a href="index.php?url=invoices" class="cursor-pointer">Invoices</a></li>
+                    <li class="block hover:border-black hover:border-2 p-2"><a href="index.php?url=compagnies" class="cursor-pointer">Compagnies</a></li>
+                    <li class="block hover:border-black hover:border-2 p-2"><a href="index.php?url=contacts" class="cursor-pointer">Contacts</a></li>
                 </ul>
             </nav>
             <div class="flex items-end justify-end gap-2">
-                <a href="#" class="p-2 font-semibold bg-white rounded-lg cursor-pointer">Sign up</a>
-                <a href="#" class="p-2 font-semibold cursor-pointer">Login</a>
+                <a href="index.php?url=login" class="p-2 font-semibold bg-white rounded-lg cursor-pointer">Sign up</a>
+                <a href="index.php?url=login" class="p-2 font-semibold cursor-pointer">Login</a>
             </div>
         </div>
     </section>
