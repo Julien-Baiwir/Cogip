@@ -33,8 +33,6 @@
             </tr>
             <?php foreach($companies as $company): ?>
                 <tr>
-    
-
                     <td><a href="index.php?url=details/<?= $company->getID() ?>"><?= $company->getName() ?></a></td>
                     <td><?= $company->getTva() ?></td>
                     <td><?= $company->getCountry() ?></td>

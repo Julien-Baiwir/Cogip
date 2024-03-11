@@ -1,14 +1,39 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-?>
-<?php foreach ($profile as $profile): ?>
-    <h1><?php echo $profile->getName(); ?></h1>
-    <h3>Name: <?php echo $profile->getName(); ?></h3>
-    <h3>Phone: <?php echo $profile->getPhone(); ?></h3>
-    <h3>Mail: <?php echo $profile->getEmail(); ?></h3>
-    <h3>Company: <?php echo $profile->getCompanyName(); ?></h3>
-<?php endforeach; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/src/output.css">
+    <title>Cogip Profile</title>
+
+    <style>
+      #menu-toggle:checked + #navbar {
+        display: block;
+        position: fixed;
+        top: 5rem;
+        left: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        z-index: 9999;
+        background-color: white;
+      }
+  </style>
+</head>
+<body>
+    <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    ?>
+    <?php foreach ($profile as $profile): ?>
+        <h1><?php echo $profile->getName(); ?></h1>
+        <h3>Name: <?php echo $profile->getName(); ?></h3>
+        <h3>Phone: <?php echo $profile->getPhone(); ?></h3>
+        <h3>Mail: <?php echo $profile->getEmail(); ?></h3>
+        <h3>Company: <?php echo $profile->getCompanyName(); ?></h3>
+    <?php endforeach; ?>    
+</body>
+</html>
+
 
 
 
