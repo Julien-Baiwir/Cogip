@@ -246,8 +246,8 @@ protected function getStatistics()
 // COMPANIES  -> CompaniesManager.php / HomeManager.php
 protected function insertNewCompany($name, $tva, $country, $type_id)
 {
-    $sql = "INSERT INTO companies (name, tva, country, type_id, created_at, update_at) 
-            VALUES (:name, :tva, :country, :type_id, NOW(), NOW())";
+    $sql = "INSERT INTO companies (name, tva, country, type_id, created_at, update_dat)
+             VALUES (:name, :tva, :country, :type_id, NOW(), NOW())";
 
     $data = [
         'name' => $name,
@@ -256,13 +256,21 @@ protected function insertNewCompany($name, $tva, $country, $type_id)
         'type_id' => $type_id
     ];
 
-    $req = $this->getBdd()->prepare($sql);
-    foreach ($data as $key => $value) {
-        $req->bindValue(":$key", $value);
+    try {
+        $req = $this->getBdd()->prepare($sql);
+     
+        foreach ($data as $key => $value) {
+            $req->bindValue(":$key", $value);
+        }
+        echo '<pre>';
+        die(var_dump($req));
+        echo '</pre>';
+        $req->execute();
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage(); 
     }
-
-    return $req->execute();
 }
+
 
 
 // Dashboard Contacts
@@ -272,7 +280,6 @@ protected function insertNewCompany($name, $tva, $country, $type_id)
 
 
 }
-
 
 
 

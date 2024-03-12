@@ -20,7 +20,6 @@ class ControllerDashboardcompanies {
 
     private function displayDashboard() {    
         $fiveCompanies = $this->_companiesManager->getFiveCompanies();
-
         $this->_view = new ViewBoard('DashboardCompanies');
         $this->_view->generate(array('fiveCompanies' => $fiveCompanies)); 
     }
@@ -28,15 +27,16 @@ class ControllerDashboardcompanies {
     public function addCompany() {
     
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        
+            (var_dump($_POST["name"]));
             $name = $_POST["name"];
             $tva = $_POST["tva"];
             $country = $_POST["country"];
             $type_id = $_POST["type_id"];
   
-           
             $this->_companiesManager->addNewCompany($name, $tva, $country, $type_id);
-
+            // echo '<pre>';
+            // die(var_dump($this->_companiesManager));
+            // echo '</pre>';
           
             header("Location: index.php?url=dashboardcompanies");
             exit();
