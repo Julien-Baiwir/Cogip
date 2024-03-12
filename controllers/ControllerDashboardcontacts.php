@@ -3,16 +3,19 @@
 require_once ('dashboard/includes/ViewBoard.php');
 
 class ControllerDashboardcontacts {
+
+    private $_HomeManager;
     private $_view;
-    private $_contactsManager;
 
     public function __construct() {
-        $this->displayDashboard();
+        $this->_HomeManager = new DashboardManager();
+        $this->displayHome();
     }
 
-    private function displayDashboard() {     
+    private function displayHome() {     
+        $fivecontacts = $this->_HomeManager->getFiveContacts();
         $this->_view = new ViewBoard('DashboardContacts');
-        $this->_view->generate(array()); 
+        $this->_view->generate(array('fivecontacts'=> $fivecontacts));
     }
 }
 

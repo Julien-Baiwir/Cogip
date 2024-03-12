@@ -10,6 +10,6 @@ class DashboardCompaniesManager extends Model
         {
         return $this->insertNewCompany($name, $tva, $country, $type_id);
         }
-  
+
 
 }
