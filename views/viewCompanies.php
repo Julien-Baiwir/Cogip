@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/src/output.css">
-    <title>Cogip Compagnies</title>
+    <title>Cogip Companies</title>
 
     <style>
       #menu-toggle:checked + #navbar {
@@ -46,7 +46,7 @@
                         </tr>
                         <?php foreach($companies as $company): ?>
                             <tr>
-                                <td class="border px-4 py-2 font-semibold"><?= $company->getName() ?></a></td>
+                                <td class="border px-4 py-2 font-semibold"><a href="index.php?url=details/<?= $company->getID() ?>"><?= $company->getName() ?></a></td>
                                 <td class="border px-4 py-2 font-semibold"><?= $company->getTva() ?></td>
                                 <td class="border px-4 py-2 font-semibold"><?= $company->getCountry() ?></td>
                                 <td class="border px-4 py-2 font-semibold"><?= $company->getType_name() ?></td>

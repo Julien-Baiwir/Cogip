@@ -10,7 +10,7 @@
                 <ul class="flex items-end flex-col lg:flex-row lg:items-center lg:justify-center font-semibold">
                     <li class="block hover:border-black hover:border-2 p-2"><a href="index.php?url=home" class="cursor-pointer">Home</a></li>
                     <li class="block hover:border-black hover:border-2 p-2"><a href="index.php?url=invoices" class="cursor-pointer">Invoices</a></li>
-                    <li class="block hover:border-black hover:border-2 p-2"><a href="index.php?url=compagnies" class="cursor-pointer">Compagnies</a></li>
+                    <li class="block hover:border-black hover:border-2 p-2"><a href="index.php?url=compagnies" class="cursor-pointer">Companies</a></li>
                     <li class="block hover:border-black hover:border-2 p-2"><a href="index.php?url=contacts" class="cursor-pointer">Contacts</a></li>
                 </ul>
             </nav>

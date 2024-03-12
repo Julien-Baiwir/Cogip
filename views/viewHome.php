@@ -97,8 +97,8 @@
               <th class="text-start p-2">Created at</th>
             </tr>
             <?php
-              if(isset($fiveCompagnies) && is_array($fiveCompagnies) && count($fiveCompagnies) > 0) {
-                  foreach($fiveCompagnies as $fivecomp) { ?>
+              if(isset($fiveCompanies) && is_array($fiveCompanies) && count($fiveCompanies) > 0) {
+                  foreach($fiveCompanies as $fivecomp) { ?>
                   <tr>
                       <td class="p-2"><?= $fivecomp->getName() ?></td>
                       <td class="p-2"><?= $fivecomp->getTVA() ?></td>
