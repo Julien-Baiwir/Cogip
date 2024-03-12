@@ -242,8 +242,3 @@ protected function getStatistics()
 
 
 }
-
-
-
-
-

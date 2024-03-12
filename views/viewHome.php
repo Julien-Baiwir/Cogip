@@ -87,7 +87,7 @@
           </table>
         </div>
         <div id="lastCompagnies" class="w-4/5">
-          <h2 class="font-inter text-5xl font-black py-10">Last Compagnies</h2>
+          <h2 class="font-inter text-5xl font-black py-10">Last Companies</h2>
           <table class="w-full text-start table-auto font-display font-semibold text-sm">
             <tr class="bg-yellow-300 ">
               <th class="text-start p-2">Name</th>
@@ -113,7 +113,7 @@
         </div>
       </section>
       <section class="flex flex-col items-center font-black lg:flex-row lg:p-14 p-8">
-        <p class="uppercase font-inter text-4xl text-center lg:text-6xl lg:text-left">Work better in your Compagny</p>
+        <p class="uppercase font-inter text-4xl text-center lg:text-6xl lg:text-left">Work better in your Company</p>
         <img src="assets/images/homepage.png" alt="" class="overflow-hidden">
       </section>
     </main>

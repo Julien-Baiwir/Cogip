@@ -115,4 +115,3 @@ class Companies {
         return $this->_update_at;
     }
 }
-

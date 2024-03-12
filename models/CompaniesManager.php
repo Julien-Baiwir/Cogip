@@ -8,5 +8,3 @@ class CompaniesManager extends Model
         return $this->getCompaniesWithTypes('Companies');
     }
 }
-
-

@@ -49,8 +49,8 @@
                                 <td class="border px-4 py-2 font-semibold"><?= $contact->getName() ?></a></td>
                                 <td class="border px-4 py-2 font-semibold"><?= $contact->getPhone() ?></td>
                                 <td class="border px-4 py-2 font-semibold"><?= $contact->getEmail() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $contact->getCompagnyName() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $company->getCreatedAt() ?></td>
+                                <td class="border px-4 py-2 font-semibold"><?= $contact->getCompanyName() ?></td>
+                                <td class="border px-4 py-2 font-semibold"><?= $contact->getCreatedAt() ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>
