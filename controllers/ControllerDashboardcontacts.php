@@ -4,6 +4,7 @@ require_once ('dashboard/includes/ViewBoard.php');
 
 class ControllerDashboardcontacts {
     private $_view;
+    private $_contactsManager;
 
     public function __construct() {
         $this->displayDashboard();

@@ -78,7 +78,7 @@ protected function getInvoicesWithCompanies($obj, $limit = null)
 
 // CONTACTS -> ContactsManager.php / HomeManager.php
 protected function getContactsWithCompanies($obj, $limit = null)
-{
+{+
     $sql = "SELECT contacts.*, companies.name AS company_name
             FROM contacts
             JOIN companies ON contacts.company_id = companies.id
@@ -262,9 +262,9 @@ protected function insertNewCompany($name, $tva, $country, $type_id)
         foreach ($data as $key => $value) {
             $req->bindValue(":$key", $value);
         }
-        echo '<pre>';
-        die(var_dump($req));
-        echo '</pre>';
+        // echo '<pre>';
+        // die(var_dump($req));
+        // echo '</pre>';
         $req->execute();
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage(); 
