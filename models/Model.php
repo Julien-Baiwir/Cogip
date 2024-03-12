@@ -262,9 +262,6 @@ protected function insertNewCompany($name, $tva, $country, $type_id)
         foreach ($data as $key => $value) {
             $req->bindValue(":$key", $value);
         }
-        echo '<pre>';
-        die(var_dump($req));
-        echo '</pre>';
         $req->execute();
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage(); 
