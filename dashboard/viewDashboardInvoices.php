@@ -11,7 +11,7 @@
 <body class="overflow-x-hidden">
     <main class="bg-gray-200  w-screen flex lg:pr-10 ">
     <div class="board w-1/3 h-screen bg-white flex flex-col h-svh lg:w-1/6 sticky top-0  ">
-            <img src="./assets/images/noe.jpg" alt="photo id" class="w-16 lg:w-32 rounded-full  self-center mt-10">
+            <img src="src/img/geek.webp" alt="photo id" class="w-16 lg:w-32 rounded-full  self-center mt-10">
             <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Noé</h1>
             <h1 class="text-center text-xs lg:text-xl font-bold p-4">Andernack</h1>
             <div class="line border-t-2"></div>
@@ -53,7 +53,7 @@
 
             </div>
             <div class="logout flex items-center justify-between mt-12 mr-12 self-end">
-                <img src="./assets/images/noe.jpg" alt="photo id" class="w-4 lg:w-8 rounded-full m-5 ">
+                <img src="src/img/geek.webp" alt="photo id" class="w-4 lg:w-8 rounded-full m-5 ">
                 <a href="index.php?url=home" class="text-xs lg:text-xl text-blue-500 hover:text-violet-600 ">Logout</a>
             </div>
         </div>
