@@ -190,6 +190,7 @@
                                 <td class="lg:py-2 lg:text-base"><?= $contact->getName() ?></td>
                                 <td class="lg:py-2 lg:text-base"><?= $contact->getPhone() ?></td>
                                 <td class="lg:py-2 lg:text-base pr-4" style="word-wrap: break-word;"><?= $contact->getEmail() ?></td>
+                                <td class="lg:py-1 lg:text-base pr-4 flex " style="word-wrap: break-word;"><a href = "#"><img src="src/img/poubelle.svg" class="w-4 m-2"></a><a href = "#"><img src="src/img/modify.svg" class="w-4 m-2"></a></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>

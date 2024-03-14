@@ -161,13 +161,13 @@
                 <h2 class="text-2xl font-bold text-center mb-2">New company</h2>
                 <form>
                     <div class="mb-4">
-                        <input type="text" id="name" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Name">
+                        <input type="text" id="name" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" minlength="3" maxlength="20" required placeholder="Name">
                     </div>
                     <div class="mb-4">
-                        <input type="text" id="tva" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="TVA">
+                        <input type="number" id="tva" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required minlength="3" maxlength="20" placeholder="TVA">
                     </div>
                     <div class="mb-6">
-                        <input type="text" id="country name" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Country">
+                        <input type="text" id="country name" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required minlength="3" maxlength="20" placeholder="Country">
                     </div>
                     <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Save</button>
                 </form>
@@ -186,9 +186,10 @@
                         </tr>
                         <?php foreach ($fiveCompanies as $fivecomp) : ?>
                             <tr>
-                                <td class="lg:py-1 lg:text-base"><?= $fivecomp->getName() ?></td>
+                                <td class="lg:py-1 lg:text-base "><?= $fivecomp->getName() ?> </td>
                                 <td class="lg:py-1 lg:text-base"><?= $fivecomp->getTva() ?></td>
                                 <td class="lg:py-1 lg:text-base pr-4" style="word-wrap: break-word;"><?= $fivecomp->getCountry() ?></td>
+                                <td class="lg:py-1 lg:text-base pr-4 flex " style="word-wrap: break-word;"><a href = "#"><img src="src/img/poubelle.svg" class="w-4 m-2"></a><a href = "#"><img src="src/img/modify.svg" class="w-4 m-2"></a></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>
