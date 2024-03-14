@@ -157,8 +157,8 @@
             </div>
         </div>
         <div class=" w-full flex flex-col items-center justify-center h-screen lg:mt-96">
-            <div class="bg-white p-8 rounded-lg shadow-lg  w-full">
-                <h2 class="text-2xl font-bold text-center mb-4">New company</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg  w-full ml-8">
+                <h2 class="text-2xl font-bold text-center mb-2">New company</h2>
                 <form>
                     <div class="mb-4">
                         <input type="text" id="name" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Name">
@@ -175,20 +175,20 @@
 
 
 
-            <div class="h-[200px] w-full m-5 lg:h-[300px] lg:col-span-2 lg:row-span-3 lg:h-auto lg:ml-10 ">
-                <div class="fond bg-white p-4 rounded-lg mt-24 shadow-lg ">
+            <div class="h-[200px] w-full  lg:col-span-2 lg:row-span-3 lg:h-auto lg:ml-10 ">
+                <div class="fond bg-white p-4 rounded-lg mt-8 shadow-lg ">
                     <h1 class="m-5 text-lg font-bold text-gray-800 lg:text-xl">Last Companies</h1>
                     <table class="border-0 ml-5 text-xs w-full">
                         <tr>
-                            <td class="lg:py-2  font-bold lg:text-lg">Name </th>
-                            <td class="lg:py-2 font-bold lg:text-lg w-[200px]">TVA</th>
-                            <td class="lg:py-2  font-bold lg:text-lg">Country</th>
+                            <td class="lg:py-1  font-bold lg:text-lg">Name </th>
+                            <td class="lg:py-1 font-bold lg:text-lg w-[200px]">TVA</th>
+                            <td class="lg:py-1  font-bold lg:text-lg">Country</th>
                         </tr>
                         <?php foreach ($fiveCompanies as $fivecomp) : ?>
                             <tr>
-                                <td class="lg:py-2 lg:text-base"><?= $fivecomp->getName() ?></td>
-                                <td class="lg:py-2 lg:text-base"><?= $fivecomp->getTva() ?></td>
-                                <td class="lg:py-2 lg:text-base pr-4" style="word-wrap: break-word;"><?= $fivecomp->getCountry() ?></td>
+                                <td class="lg:py-1 lg:text-base"><?= $fivecomp->getName() ?></td>
+                                <td class="lg:py-1 lg:text-base"><?= $fivecomp->getTva() ?></td>
+                                <td class="lg:py-1 lg:text-base pr-4" style="word-wrap: break-word;"><?= $fivecomp->getCountry() ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>

@@ -64,7 +64,7 @@
                     <h1 class=" font-bold mt-3 ml-2 lg:text-4xl ">Dashboard</h1>
                     <p class="ml-2 text-xs">dashboard/</p>
                 </div>
-                <div class="content__rectangle ml-10 rounded-lg w-full bg-indigo-300 h-[120px] absolute top-[60px] lg:mt-32 lg:h-[200px]">
+                <div class="content__rectangle  ml-10 rounded-lg w-full bg-indigo-300 h-[120px] absolute top-[60px] lg:mt-32 lg:h-[200px]">
                     <h1 class="ml-5 mt-2 text-white w-[110px] lg:text-6xl lg:w-[900px]">Welcome back Noé!</h1>
                     <p class="ml-5 text-xs font-light text-white w-[120px] lg:text-2xl  lg:w-[500px] lg:mt-10">You can
                         here add an invoice, a company and some contacts</p>
@@ -157,6 +157,7 @@
             </div>
         </div>
         <div class=" w-full flex flex-col items-center justify-center h-screen lg:mt-96">
+        <div class="invisible lg:w-full lg:h-[400px] lg:mb-56"></div>
             <div class="bg-white p-8 rounded-lg shadow-lg  w-full">
                 <h2 class="text-2xl font-bold text-center mb-4">New Invoice</h2>
                 <form>
