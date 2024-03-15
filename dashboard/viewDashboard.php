@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 
 <body class="overflow-x-hidden">
@@ -67,8 +69,8 @@
                     <h1 class=" font-bold mt-3 ml-2 lg:text-4xl ">Dashboard</h1>
                     <p class="ml-2 text-xs">dashboard/</p>
                 </div>
-                <div class="content__rectangle w-9/12 rounded-lg  ml-2 bg-indigo-300 h-[120px] absolute top-[60px] lg:w-10/12 lg:mt-32 lg:h-[200px] lg:ml-10">
-                    <h1 class="ml-5 mt-2 text-white w-[110px] lg:text-6xl lg:w-[900px]">Welcome back Noé!</h1>
+                <div class="content__rectangle scroll-smooth w-9/12 rounded-lg  ml-2 bg-indigo-300 h-[120px] absolute top-[60px] lg:w-10/12 lg:mt-32 lg:h-[200px] lg:ml-10">
+                    <h1 id="text" class="ml-5 mt-2 text-white w-[110px] lg:text-6xl lg:w-[900px]">Welcome back Noé!</h1>
                     <p class="ml-5 text-xs font-light text-white w-[120px] lg:text-2xl  lg:w-[500px] lg:mt-10">You can
                         here add an invoice, a company and some contacts</p>
                 </div>
@@ -162,11 +164,11 @@
                 <div class="fond bg-white w-11/12 p-4 rounded-xl flex flex-col justify-center  pb-16 items-center">
                     <h1 class=" text-center text-lg font-bold text-gray-800 lg:mb-10 lg:text-4xl">Statistics</h1>
                     <div class="statistics flex  ">
-                        <div class="statistics__invoices rounded-full text-white mt-10  bg-indigo-500 w-[68px] h-[68px] lg:w-[100px]  lg:ml-5 lg:h-[100px] ">
+                        <div id="statistics__invoices" class="statistics__invoices rounded-full text-white mt-10  bg-indigo-500 w-[68px] h-[68px] lg:w-[100px]  lg:ml-5 lg:h-[100px] ">
                             <p class="text-xs font-bold text-center pt-5 lg:text-lg"><?php echo $statistics['total_invoices']; ?> <br> invoices</p>
                         </div>
-                        <div class="statistics__contacts rounded-full  text-white mt-10 ml-2 bg-indigo-300 w-[68px] h-[68px] lg:ml-5 lg:w-[100px] lg:h-[100px] ">
-                            <p class="text-xs font-bold text-center pt-5 lg:text-lg"><?php echo $statistics['total_contacts']; ?><br> contacts</p>
+                        <div id="statistics__contacts" class="statistics__contacts rounded-full  text-white mt-10 ml-2 bg-indigo-300 w-[68px] h-[68px] lg:ml-5 lg:w-[100px] lg:h-[100px] ">
+                            <p id="statistics__companies" class="text-xs font-bold text-center pt-5 lg:text-lg"><?php echo $statistics['total_contacts']; ?><br> contacts</p>
                         </div>
                         <div class="statistics__companies rounded-full text-white mt-10 ml-2 bg-blue-300 w-[68px] h-[68px]  lg:ml-5 lg:w-[100px] lg:h-[100px] ">
                             <p class="text-xs font-bold text-center pt-5 lg:text-lg"><?php echo $statistics['total_companies']; ?> <br> companies</p>
@@ -261,6 +263,53 @@
             <div class="col-span-2 row-span-2 bg-pink-500 lg:col-span-2 lg:row-span-2"></div> -->
     </div>
     </main>
+    <script>
+        let text = new SplitType('#text');
+        let characters = document.querySelectorAll('.char');
+
+        for(i=0; i<characters.length; i++){
+           characters[i].classList.add('translate-y-full');
+            }
+            gsap.to('.char', {
+               y: 0,
+               stagger: 0.05,
+               delay: 0.02,
+               duration: 0.5,
+
+            });
+
+
+           gsap.to('.statistics__invoices', {
+               scrollTrigger:{
+                     trigger: '.statistics__invoices',
+                     toggleActions: "restart pause reverse pause",
+                },
+               
+               x:0,
+               rotation: 360,
+                duration: 3,
+           }); 
+           gsap.to('.statistics__contacts', {
+               scrollTrigger:{
+                     trigger: '.statistics__invoices',
+                     toggleActions: "restart pause reverse pause",
+                },
+               
+               x:0,
+               rotation: 360,
+                duration: 3,
+           }); 
+           gsap.to('.statistics__companies', {
+               scrollTrigger:{
+                     trigger: '.statistics__invoices',
+                     toggleActions: "restart pause reverse pause",
+                },
+               
+               x:0,
+               rotation: 360,
+                duration: 3,
+           }); 
+    </script>
 
 </body>
 
