@@ -159,7 +159,7 @@
         <div class=" w-full flex flex-col items-center justify-center h-screen lg:mt-96">
             <div class="bg-white p-8 rounded-lg shadow-lg  w-full ml-8">
                 <h2 class="text-2xl font-bold text-center mb-2">New company</h2>
-                <form>
+                <form id="form">
                     <div class="mb-4">
                         <input type="text" id="name" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" minlength="3" maxlength="20" required placeholder="Name">
                     </div>
@@ -167,7 +167,7 @@
                         <input type="number" id="tva" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required minlength="3" maxlength="20" placeholder="TVA">
                     </div>
                     <div class="mb-6">
-                        <input type="text" id="country name" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required minlength="3" maxlength="20" placeholder="Country">
+                        <input type="text" id="country" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required minlength="3" maxlength="20" placeholder="Country">
                     </div>
                     <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Save</button>
                 </form>

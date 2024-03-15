@@ -160,7 +160,7 @@
         <div class="invisible lg:w-full lg:h-[400px] lg:mb-56"></div>
             <div class="bg-white p-8 rounded-lg shadow-lg  w-full">
                 <h2 class="text-2xl font-bold text-center mb-4">New Invoice</h2>
-                <form>
+                <form class="form">
                     <div class="mb-4">
                         <input type="text" id="invoice" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Invoice Number">
                     </div>
@@ -168,7 +168,7 @@
                         <input type="text" id="date" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Date">
                     </div>
                     <div class="mb-6">
-                        <input type="text" id="company name" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Company">
+                        <input type="text" id="company" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Company">
                     </div>
                     <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Save</button>
                 </form>

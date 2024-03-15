@@ -159,7 +159,7 @@
         <div class=" w-full flex flex-col items-center justify-center h-screen lg:mt-96">
             <div class="bg-white p-8 rounded-lg shadow-lg  w-full">
                 <h2 class="text-2xl font-bold text-center mb-4">New Contact</h2>
-                <form>
+                <form  class="form">
                     <div class="mb-4">
                         <input type="text" id="name" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Name">
                     </div>

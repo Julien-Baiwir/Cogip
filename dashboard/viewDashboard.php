@@ -10,66 +10,69 @@
 
 <body class="overflow-x-hidden">
     <main class="bg-gray-200  w-screen flex lg:pr-10 ">
-    <div class="board w-1/3 h-screen bg-white flex flex-col h-svh lg:w-1/6 sticky top-0  ">
-            <img src="src/img/geek.webp" alt="photo id" class="w-16 lg:w-32 rounded-full  self-center mt-10">
-            <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Noé</h1>
-            <h1 class="text-center text-xs lg:text-xl font-bold p-4">Andernack</h1>
-            <div class="line border-t-2"></div>
-            <div class="dashboard flex items-center mt-5 ">
-                <svg class="ml-2  w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.0968 6.03223V21.2903" stroke="#9698D6" />
-                    <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
-                    <path d="M0.354858 6.03223H21.2903" stroke="#9698D6" />
-                </svg>
-                <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboard">Dashboard</a>
-            </div>
-            <div class="invoices flex items-center mt-3 lg:mt-6">
-                <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.88232 11H17.4706" stroke="#9698D6" />
-                    <path d="M3.88232 16.8235H17.4706" stroke="#9698D6" />
-                    <path d="M3.88232 7.11768H7.76468" stroke="#9698D6" />
-                    <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
-                </svg>
-                <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardinvoices">Invoices</a>
+        <div class="board w-1/3 h-fit bg-white flex flex-col justify-between h-svh lg:w-1/6 sticky top-0 ">
+            <div class="board__content">
+                <img src="src/img/geek.webp" alt="photo id" class="w-16 lg:w-32 rounded-full ml-12 sm:ml-16 lg:ml-4 xl:ml-12 mt-10">
+                <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Noé</h1>
+                <h1 class="text-center text-xs lg:text-xl font-bold p-4">Andernack</h1>
+                <div class="line border-t-2"></div>
+                <div class="dashboard flex items-center mt-5 ">
+                    <svg class="ml-2  w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.0968 6.03223V21.2903" stroke="#9698D6" />
+                        <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
+                        <path d="M0.354858 6.03223H21.2903" stroke="#9698D6" />
+                    </svg>
+                    <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboard">Dashboard</a>
+                </div>
+                <div class="invoices flex items-center mt-3 lg:mt-6">
+                    <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.88232 11H17.4706" stroke="#9698D6" />
+                        <path d="M3.88232 16.8235H17.4706" stroke="#9698D6" />
+                        <path d="M3.88232 7.11768H7.76468" stroke="#9698D6" />
+                        <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
+                    </svg>
+                    <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardinvoices">Invoices</a>
 
-            </div>
-            <div class="companies flex items-center mt-3 lg:mt-6">
-                <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.82355 10.353H7.76472M5.82355 14.2354H7.76472M12.2941 8.41187H15.5294M12.2941 11.6472H15.5294M12.2941 14.2354H15.5294" stroke="#9698D6" />
-                    <path d="M1.29407 16.8236H20.7058M3.8823 16.8236V7.11768H7.1176H10.3529V16.8236H3.8823Z" stroke="#9698D6" />
-                    <path d="M10.353 7.62853V5.17651H18.1177V16.8236" stroke="#9698D6" />
-                    <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
-                </svg>
-                <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardcompanies">Companies</a>
+                </div>
+                <div class="companies flex items-center mt-3 lg:mt-6">
+                    <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.82355 10.353H7.76472M5.82355 14.2354H7.76472M12.2941 8.41187H15.5294M12.2941 11.6472H15.5294M12.2941 14.2354H15.5294" stroke="#9698D6" />
+                        <path d="M1.29407 16.8236H20.7058M3.8823 16.8236V7.11768H7.1176H10.3529V16.8236H3.8823Z" stroke="#9698D6" />
+                        <path d="M10.353 7.62853V5.17651H18.1177V16.8236" stroke="#9698D6" />
+                        <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
+                    </svg>
+                    <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardcompanies">Companies</a>
 
+                </div>
+                <div class="contacts flex items-center mt-3 lg:mt-6">
+                    <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
+                        <path d="M16.8235 18.1176H5.17645V11.647L11 12.9411L16.8235 11.647V18.1176Z" stroke="#9698D6" />
+                        <circle cx="11" cy="8.41174" r="4.02941" stroke="#9698D6" />
+                    </svg>
+                    <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardcontacts">Contacts</a>
+                </div>
             </div>
-            <div class="contacts flex items-center mt-3 lg:mt-6">
-                <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
-                    <path d="M16.8235 18.1176H5.17645V11.647L11 12.9411L16.8235 11.647V18.1176Z" stroke="#9698D6" />
-                    <circle cx="11" cy="8.41174" r="4.02941" stroke="#9698D6" />
-                </svg>
-                <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardcontacts">Contacts</a>
-
-            </div>
-            <div class="logout flex items-center justify-between mt-12 mr-12 self-end">
-                <img src="src/img/geek.webp" alt="photo id" class="w-4 lg:w-8 rounded-full m-5 ">
-                <a href="index.php?url=home" class="text-xs lg:text-xl text-blue-500 hover:text-violet-600 ">Logout</a>
+            <div class="logout">
+                <div class="logout__content flex items-center justify-between mt-12 mr-12 ">
+                    <img src="src/img/geek.webp" alt="photo id" class="w-4 lg:w-8 rounded-full m-5 ">
+                    <a href="index.php?url=home" class="text-xs lg:text-xl text-blue-500 hover:text-violet-600 ">Logout</a>
+                </div>
             </div>
         </div>
 
-        <div class="content flex-grow h-[1340px] lg:grid lg:grid-cols-4 lg:grid-rows-8 lg:gap-x-10 lg:gap-y-10">
+        <div class="content pb-5 bg-gray-200 flex-grow w-screen lg:grid lg:grid-cols-4 lg:grid-rows-8 lg:gap-x-10 lg:gap-y-10">
             <div class=" h-[180px] flex lg:col-span-4 lg:row-span-2 lg:h-auto lg:h-[300px]">
                 <div class="content__dashboard ">
                     <h1 class=" font-bold mt-3 ml-2 lg:text-4xl ">Dashboard</h1>
                     <p class="ml-2 text-xs">dashboard/</p>
                 </div>
-                <div class="content__rectangle ml-10 rounded-lg w-full bg-indigo-300 h-[120px] absolute top-[60px] lg:mt-32 lg:h-[200px]">
+                <div class="content__rectangle w-9/12 rounded-lg  ml-2 bg-indigo-300 h-[120px] absolute top-[60px] lg:w-10/12 lg:mt-32 lg:h-[200px] lg:ml-10">
                     <h1 class="ml-5 mt-2 text-white w-[110px] lg:text-6xl lg:w-[900px]">Welcome back Noé!</h1>
                     <p class="ml-5 text-xs font-light text-white w-[120px] lg:text-2xl  lg:w-[500px] lg:mt-10">You can
                         here add an invoice, a company and some contacts</p>
                 </div>
-                <svg class="absolute  left-[330px] sm:left-[600px] h-[120px] lg:h-[320px] lg:left-[900px]" viewBox="0 0 417 333" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="absolute  left-3/4 sm:left-[600px] h-[120px] lg:h-[320px] lg:left-[900px]" viewBox="0 0 417 333" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M185.938 274.782C205.456 274.782 221.279 271.286 221.279 266.973C221.279 262.661 205.456 259.165 185.938 259.165C166.42 259.165 150.597 262.661 150.597 266.973C150.597 271.286 166.42 274.782 185.938 274.782Z" fill="black" />
                     <path d="M185.938 266.973L166.087 329.076" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
                     <path d="M185.938 266.973L205.79 329.076" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
@@ -155,18 +158,18 @@
 
 
             </div>
-            <div class=" h-[140px] lg:h-[300px] m-5  lg:col-span-2 lg:row-span-2 lg:h-auto lg:mt-32 lg:ml-10 ">
-                <div class="fond bg-white p-4 rounded-xl flex flex-col justify-center items-center pb-16">
-                    <h1 class=" text-lg font-bold text-gray-800 lg:mb-10 lg:text-4xl">Statistics</h1>
+            <div class=" m-2  lg:h-[300px]   lg:col-span-2 lg:row-span-2 lg:h-auto lg:mt-32 lg:ml-10 ">
+                <div class="fond bg-white w-11/12 p-4 rounded-xl flex flex-col justify-center  pb-16 items-center">
+                    <h1 class=" text-center text-lg font-bold text-gray-800 lg:mb-10 lg:text-4xl">Statistics</h1>
                     <div class="statistics flex  ">
-                        <div class="statistics__invoices  bg-indigo-500 w-[100px] h-[100px] rounded-full text-white mt-10">
-                            <p class="text-xs font-bold text-center pt-5"><?php echo $statistics['total_invoices']; ?> <br> invoices</p>
+                        <div class="statistics__invoices rounded-full text-white mt-10  bg-indigo-500 w-[68px] h-[68px] lg:w-[100px]  lg:ml-5 lg:h-[100px] ">
+                            <p class="text-xs font-bold text-center pt-5 lg:text-lg"><?php echo $statistics['total_invoices']; ?> <br> invoices</p>
                         </div>
-                        <div class="statistics__contacts bg-indigo-300 w-[100px] h-[100px] rounded-full  text-white mt-10 ml-5">
-                            <p class="text-xs font-bold text-center pt-5"><?php echo $statistics['total_contacts']; ?><br> contacts</p>
+                        <div class="statistics__contacts rounded-full  text-white mt-10 ml-2 bg-indigo-300 w-[68px] h-[68px] lg:ml-5 lg:w-[100px] lg:h-[100px] ">
+                            <p class="text-xs font-bold text-center pt-5 lg:text-lg"><?php echo $statistics['total_contacts']; ?><br> contacts</p>
                         </div>
-                        <div class="statistics__companies bg-blue-300 w-[100px] h-[100px] rounded-full text-white mt-10 ml-5">
-                            <p class="text-xs font-bold text-center pt-5"><?php echo $statistics['total_companies']; ?> <br> companies</p>
+                        <div class="statistics__companies rounded-full text-white mt-10 ml-2 bg-blue-300 w-[68px] h-[68px]  lg:ml-5 lg:w-[100px] lg:h-[100px] ">
+                            <p class="text-xs font-bold text-center pt-5 lg:text-lg"><?php echo $statistics['total_companies']; ?> <br> companies</p>
                         </div>
                     </div>
                 </div>
@@ -176,20 +179,20 @@
             // Invoices
             if (!empty($fiveInvoices)) {
             ?>
-                <div class="flex flex-col justify-center m-5 mt-32 h-[200px] lg:h-[300px] lg:col-span-2 lg:row-span-3 lg:h-auto">
-                    <div class="fond bg-white p-4 rounded-lg mt-10">
+                <div class="flex flex-col justify-center mt-2   ml-2 h-[200px] lg:h-[300px] lg:col-span-2 lg:row-span-3 lg:h-auto lg:ml-5 lg:mt-32">
+                    <div class="fond bg-white w-11/12 p-4 rounded-xl mt-10">
                         <h1 class="m-5 text-lg font-bold text-gray-800 lg:text-2xl">Last Invoices</h1>
                         <table class="border-0 ml-5 text-xs w-full ">
                             <tr>
-                                <td class="lg:py-2 font-bold lg:text-xl">Invoice Number </th>
-                                <td class="lg:py-2  font-bold lg:text-xl">Dates</th>
-                                <td class=" lg:py-2 font-bold lg:text-xl">Company</th>
+                                <td class="text-xs lg:py-2 font-bold lg:text-xl">Invoice Number </th>
+                                <td class="text-xs lg:py-2  font-bold lg:text-xl">Dates</th>
+                                <td class="text-xs  lg:py-2 font-bold lg:text-xl">Company</th>
                             </tr>
                             <?php foreach ($fiveInvoices as $invoice) : ?>
                                 <tr>
-                                    <td class="lg:py-2 lg:text-xl"><?= $invoice->getRef() ?></td>
-                                    <td class="lg:py-2 lg:text-xl"><?= $invoice->getUpdate_at() ?></td>
-                                    <td class="lg:py-2 lg:text-xl "><?= $invoice->getCompany_name() ?></td>
+                                    <td class="text-xs lg:py-2 lg:text-xl"><?= $invoice->getRef() ?></td>
+                                    <td class="text-xs lg:py-2 lg:text-xl"><?= $invoice->getUpdate_at() ?></td>
+                                    <td class="text-xs lg:py-2 lg:text-xl "><?= $invoice->getCompany_name() ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </table>
@@ -200,20 +203,20 @@
             // Contacts
             if (!empty($fivecontacts)) {
             ?>
-                <div class="h-[200px] m-5 lg:h-[300px] lg:col-span-2 lg:row-span-3 lg:h-auto lg:ml-10">
-                    <div class="fond bg-white p-4 rounded-lg mt-24">
+                <div class="h-[200px]  ml-2 lg:h-[300px] lg:col-span-2 lg:row-span-3 lg:h-auto lg:ml-10 ">
+                    <div class="fond w-11/12 mt-12 bg-white p-4 rounded-xl lg:mt-24">
                         <h1 class="m-5 text-lg font-bold text-gray-800 lg:text-xl">Last Contacts</h1>
                         <table class="border-0 ml-5 text-xs w-full">
                             <tr>
-                                <td class="lg:py-2  font-bold lg:text-lg">Name </th>
-                                <td class="lg:py-2 font-bold lg:text-lg w-[200px]">Phone</th>
-                                <td class="lg:py-2  font-bold lg:text-lg">Email</th>
+                                <td class="text-xs lg:py-2  font-bold lg:text-lg">Name </th>
+                                <td class="text-xs lg:py-2 font-bold lg:text-lg w-[200px]">Phone</th>
+                                <td class="text-xs lg:py-2  font-bold lg:text-lg">Email</th>
                             </tr>
                             <?php foreach ($fivecontacts as $contact) : ?>
                                 <tr>
-                                    <td class="lg:py-2 lg:text-base"><?= $contact->getName() ?></td>
-                                    <td class="lg:py-2 lg:text-base"><?= $contact->getPhone() ?></td>
-                                    <td class="lg:py-2 lg:text-base pr-4" style="word-wrap: break-word;"><?= $contact->getEmail() ?></td>
+                                    <td class="text-xs lg:py-2 lg:text-base"><?= $contact->getName() ?></td>
+                                    <td class="text-xs lg:py-2 lg:text-base"><?= $contact->getPhone() ?></td>
+                                    <td class="text-xs lg:py-2 lg:text-base pr-4" style="word-wrap: break-word;"><?= $contact->getEmail() ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </table>
@@ -226,20 +229,20 @@
                 <?php
                 if (!empty($fiveCompanies)) {
                 ?>
-                    <div class="h-[200px] m-5 mt-24 lg:h-[300px] lg:col-span-2 lg:row-span-3  lg:h-auto lg:mt-3">
-                        <div class="fond bg-white p-4 rounded-lg">
+                    <div class="h-[200px] ml-2 mt-28 lg:h-[300px] lg:col-span-2 lg:row-span-3  lg:h-auto lg:mt-3 lg:ml-5">
+                        <div class="fond w-11/12 bg-white p-4 rounded-xl">
                             <h1 class="m-5 text-lg font-bold text-gray-800 lg:text-2xl">Last Companies</h1>
                             <table class="border-0 ml-5 text-xs w-full">
                                 <tr>
-                                    <td class="lg:py-2  font-bold lg:text-lg">Name </th>
-                                    <td class=" lg:py-2 font-bold lg:text-lg">TVA</th>
-                                    <td class="lg:py-2  font-bold lg:text-lg">Country</th>
+                                    <td class="text-xs lg:py-2  font-bold lg:text-lg">Name </th>
+                                    <td class=" text-xs lg:py-2 font-bold lg:text-lg">TVA</th>
+                                    <td class="text-xs lg:py-2  font-bold lg:text-lg">Country</th>
                                 </tr>
                                 <tr>
                                     <?php foreach ($fiveCompanies as $fivecomp) : ?>
-                                        <td class="lg:py-2 lg:text-base"><?= $fivecomp->getName() ?></td>
-                                        <td class="lg:py-2 lg:text-base"><?= $fivecomp->getTva() ?></td>
-                                        <td class="lg:py-2 lg:text-base"><?= $fivecomp->getCountry() ?></td>
+                                        <td class="text-xs lg:py-2 lg:text-base"><?= $fivecomp->getName() ?></td>
+                                        <td class="text-xs lg:py-2 lg:text-base"><?= $fivecomp->getTva() ?></td>
+                                        <td class="text-xs lg:py-2 lg:text-base"><?= $fivecomp->getCountry() ?></td>
                                 </tr>
                             <?php endforeach; ?>
                             </table>
