@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,66 +12,69 @@
 
 <body class="overflow-x-hidden">
     <main class="bg-gray-200  w-screen flex lg:pr-10 ">
-    <div class="board w-1/3 h-screen bg-white flex flex-col h-svh lg:w-1/6 sticky top-0  ">
-            <img src="src/img/geek.webp" alt="photo id" class="w-16 lg:w-32 rounded-full  self-center mt-10">
-            <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Noé</h1>
-            <h1 class="text-center text-xs lg:text-xl font-bold p-4">Andernack</h1>
-            <div class="line border-t-2"></div>
-            <div class="dashboard flex items-center mt-5 ">
-                <svg class="ml-2  w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.0968 6.03223V21.2903" stroke="#9698D6" />
-                    <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
-                    <path d="M0.354858 6.03223H21.2903" stroke="#9698D6" />
-                </svg>
-                <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboard">Dashboard</a>
-            </div>
-            <div class="invoices flex items-center mt-3 lg:mt-6">
-                <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.88232 11H17.4706" stroke="#9698D6" />
-                    <path d="M3.88232 16.8235H17.4706" stroke="#9698D6" />
-                    <path d="M3.88232 7.11768H7.76468" stroke="#9698D6" />
-                    <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
-                </svg>
-                <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardinvoices">Invoices</a>
+        <div class="board w-1/3 h-fit bg-white shadow-lg pb-5 flex flex-col justify-between h-svh lg:w-1/6 sticky top-0 ">
+            <div class="board__content">
+                <img src="src/img/geek.webp" alt="photo id" class="w-16 lg:w-32 rounded-full ml-12 sm:ml-16 lg:ml-4 xl:ml-12 mt-10">
+                <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Noé</h1>
+                <h1 class="text-center text-xs lg:text-xl font-bold p-4">Andernack</h1>
+                <div class="line border-t-2"></div>
+                <div class="dashboard flex items-center mt-5 ">
+                    <svg class="ml-2  w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.0968 6.03223V21.2903" stroke="#9698D6" />
+                        <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
+                        <path d="M0.354858 6.03223H21.2903" stroke="#9698D6" />
+                    </svg>
+                    <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboard">Dashboard</a>
+                </div>
+                <div class="invoices flex items-center mt-3 lg:mt-6">
+                    <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.88232 11H17.4706" stroke="#9698D6" />
+                        <path d="M3.88232 16.8235H17.4706" stroke="#9698D6" />
+                        <path d="M3.88232 7.11768H7.76468" stroke="#9698D6" />
+                        <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
+                    </svg>
+                    <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardinvoices">Invoices</a>
 
-            </div>
-            <div class="companies flex items-center mt-3 lg:mt-6">
-                <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.82355 10.353H7.76472M5.82355 14.2354H7.76472M12.2941 8.41187H15.5294M12.2941 11.6472H15.5294M12.2941 14.2354H15.5294" stroke="#9698D6" />
-                    <path d="M1.29407 16.8236H20.7058M3.8823 16.8236V7.11768H7.1176H10.3529V16.8236H3.8823Z" stroke="#9698D6" />
-                    <path d="M10.353 7.62853V5.17651H18.1177V16.8236" stroke="#9698D6" />
-                    <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
-                </svg>
-                <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardcompanies">Companies</a>
+                </div>
+                <div class="companies flex items-center mt-3 lg:mt-6">
+                    <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.82355 10.353H7.76472M5.82355 14.2354H7.76472M12.2941 8.41187H15.5294M12.2941 11.6472H15.5294M12.2941 14.2354H15.5294" stroke="#9698D6" />
+                        <path d="M1.29407 16.8236H20.7058M3.8823 16.8236V7.11768H7.1176H10.3529V16.8236H3.8823Z" stroke="#9698D6" />
+                        <path d="M10.353 7.62853V5.17651H18.1177V16.8236" stroke="#9698D6" />
+                        <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
+                    </svg>
+                    <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardcompanies">Companies</a>
 
+                </div>
+                <div class="contacts flex items-center mt-3 lg:mt-6">
+                    <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
+                        <path d="M16.8235 18.1176H5.17645V11.647L11 12.9411L16.8235 11.647V18.1176Z" stroke="#9698D6" />
+                        <circle cx="11" cy="8.41174" r="4.02941" stroke="#9698D6" />
+                    </svg>
+                    <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardcontacts">Contacts</a>
+                </div>
             </div>
-            <div class="contacts flex items-center mt-3 lg:mt-6">
-                <svg class=" ml-2 w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="21" height="21" rx="2.5" stroke="#9698D6" />
-                    <path d="M16.8235 18.1176H5.17645V11.647L11 12.9411L16.8235 11.647V18.1176Z" stroke="#9698D6" />
-                    <circle cx="11" cy="8.41174" r="4.02941" stroke="#9698D6" />
-                </svg>
-                <a class=" ml-1 text-xs lg:text-xl hover:font-bold" href="index.php?url=dashboardcontacts">Contacts</a>
-
-            </div>
-            <div class="logout flex items-center justify-between mt-12 mr-12 self-end">
-                <img src="src/img/geek.webp" alt="photo id" class="w-4 lg:w-8 rounded-full m-5 ">
-                <a href="index.php?url=home" class="text-xs lg:text-xl text-blue-500 hover:text-violet-600 ">Logout</a>
+            <div class="logout">
+                <div class="logout__content flex items-center justify-between mt-12 mr-12 ">
+                    <img src="src/img/geek.webp" alt="photo id" class="w-4 lg:w-8 rounded-full m-5 ">
+                    <a href="index.php?url=home" class="text-xs lg:text-xl text-blue-500 hover:text-violet-600 ">Logout</a>
+                </div>
             </div>
         </div>
 
-        <div class="content flex-grow h-[1340px] lg:grid lg:grid-cols-4 lg:grid-rows-8 lg:gap-x-10 lg:gap-y-10">
+        <div class="content pb-5 bg-gray-200 flex-grow w-screen ">
             <div class=" h-[180px] flex lg:col-span-4 lg:row-span-2 lg:h-auto lg:h-[300px]">
                 <div class="content__dashboard ">
                     <h1 class=" font-bold mt-3 ml-2 lg:text-4xl ">Dashboard</h1>
                     <p class="ml-2 text-xs">dashboard/</p>
                 </div>
-                <div class="content__rectangle  ml-10 rounded-lg w-full bg-indigo-300 h-[120px] absolute top-[60px] lg:mt-32 lg:h-[200px]">
+                <div class="content__rectangle w-9/12 rounded-lg  ml-2 bg-indigo-300 h-[120px] absolute top-[60px] lg:w-10/12 lg:mt-32 lg:h-[200px] lg:ml-10">
                     <h1 class="ml-5 mt-2 text-white w-[110px] lg:text-6xl lg:w-[900px]">Welcome back Noé!</h1>
                     <p class="ml-5 text-xs font-light text-white w-[120px] lg:text-2xl  lg:w-[500px] lg:mt-10">You can
                         here add an invoice, a company and some contacts</p>
                 </div>
-                <svg class="absolute  left-[330px] sm:left-[600px] h-[120px] lg:h-[320px] lg:left-[900px]" viewBox="0 0 417 333" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="absolute  left-3/4 sm:left-[600px] h-[120px] lg:h-[320px] lg:left-[900px]" viewBox="0 0 417 333" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M185.938 274.782C205.456 274.782 221.279 271.286 221.279 266.973C221.279 262.661 205.456 259.165 185.938 259.165C166.42 259.165 150.597 262.661 150.597 266.973C150.597 271.286 166.42 274.782 185.938 274.782Z" fill="black" />
                     <path d="M185.938 266.973L166.087 329.076" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
                     <path d="M185.938 266.973L205.79 329.076" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
@@ -155,45 +160,45 @@
 
 
             </div>
-        </div>
-        <div class=" w-full flex flex-col items-center justify-center h-screen lg:mt-96">
-        <div class="invisible lg:w-full lg:h-[400px] lg:mb-56"></div>
-            <div class="bg-white p-8 rounded-lg shadow-lg  w-full">
-                <h2 class="text-2xl font-bold text-center mb-4">New Invoice</h2>
-                <form class="form">
-                    <div class="mb-4">
-                        <input type="text" id="invoice" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Invoice Number">
-                    </div>
-                    <div class="mb-4">
-                        <input type="text" id="date" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Date">
-                    </div>
-                    <div class="mb-6">
-                        <input type="text" id="company" class="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Company">
-                    </div>
-                    <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Save</button>
-                </form>
-            </div>
+
+            <div class=" w-full flex flex-col items-center  h-screen lg:mt-96">
+                <div class="bg-white ml-4 mb-4 p-8 rounded-lg shadow-lg  w-10/12 lg:ml-4">
+                    <h2 class=" text-lg font-bold text-center mb-2 lg:text-2xl">New Invoice</h2>
+                    <form id="form">
+                        <div class="mb-2">
+                            <input type="text" id="invoice" class="text-xs form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500 lg:text-base" minlength="3" maxlength="20" required placeholder="Invoice Number">
+                        </div>
+                        <div class="mb-2">
+                            <input type="number" id="date" class="text-xs form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500 lg:text-base" required minlength="3" maxlength="20" placeholder="Date">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="company" class=" text-xs form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500 lg:text-base" required minlength="3" maxlength="20" placeholder="Company">
+                        </div>
+                        <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Save</button>
+                    </form>
+                </div>
 
 
 
-            <div class="h-[200px] w-full m-5 lg:h-[300px] lg:col-span-2 lg:row-span-3 lg:h-auto lg:ml-10 ">
-                <div class="fond bg-white p-4 rounded-lg mt-24 shadow-lg ">
-                    <h1 class="m-5 text-lg font-bold text-gray-800 lg:text-xl">Last Invoice</h1>
-                    <table class="border-0 ml-5 text-xs w-full">
-                        <tr>
-                            <td class="lg:py-2  font-bold lg:text-lg">Invoice number </th>
-                            <td class="lg:py-2 font-bold lg:text-lg w-[200px]">Date</th>
-                            <td class="lg:py-2  font-bold lg:text-lg">Company</th>
-                        </tr>
-                        <?php foreach ($fiveInvoices as $invoice) : ?>
+                <div class="w-full lg:ml-20 lg:mt-8">
+                    <div class="fond bg-white p-8 rounded-lg   w-10/12 ml-8 ">
+                        <h1 class="m-5 text-lg font-bold text-gray-800 lg:text-xl">Last Invoices</h1>
+                        <table class="border-0 ml-5 text-xs w-full">
                             <tr>
-                                <td class="lg:py-2 lg:text-base"><?= $invoice->getRef() ?></td>
-                                <td class="lg:py-2 lg:text-base"><?= $invoice->getUpdate_at() ?></td>
-                                <td class="lg:py-2 lg:text-base pr-4" style="word-wrap: break-word;"><?= $invoice->getCompany_name() ?></td>
-                                <td class="lg:py-1 lg:text-base pr-4 flex " style="word-wrap: break-word;"><a href = "#"><img src="src/img/poubelle.svg" class="w-4 m-2"></a><a href = "#"><img src="src/img/modify.svg" class="w-4 m-2"></a></td>
+                                <td class="lg:py-1  font-bold lg:text-lg">Invoice number </th>
+                                <td class="lg:py-1 font-bold lg:text-lg w-[200px]">Date</th>
+                                <td class="lg:py-1  font-bold lg:text-lg">Company</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </table>
+                            <?php foreach ($fiveInvoices as $invoice) : ?>
+                                <tr>
+                                    <td class="lg:py-1 lg:text-base "><?= $invoice->getRef() ?> </td>
+                                    <td class="lg:py-1 lg:text-base"><?= $invoice->getUpdate_at() ?></td>
+                                    <td class="lg:py-1 lg:text-base pr-4" style="word-wrap: break-word;"><?= $invoice->getCompany_name() ?></td>
+                                    <td class="lg:py-1 lg:text-base pr-4 flex " style="word-wrap: break-word;"><a href="#"><img src="src/img/poubelle.svg" class="w-4 m-2"></a><a href="#"><img src="src/img/modify.svg" class="w-4 m-2"></a></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -202,3 +207,8 @@
 </body>
 
 </html>
+            
+
+
+
+         

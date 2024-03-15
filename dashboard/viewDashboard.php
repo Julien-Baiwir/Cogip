@@ -10,7 +10,7 @@
 
 <body class="overflow-x-hidden">
     <main class="bg-gray-200  w-screen flex lg:pr-10 ">
-        <div class="board w-1/3 h-fit bg-white flex flex-col justify-between h-svh lg:w-1/6 sticky top-0 ">
+        <div class="board w-1/3 h-screen bg-white shadow-lg pb-5 flex flex-col justify-between h-svh lg:w-1/6 sticky top-0 ">
             <div class="board__content">
                 <img src="src/img/geek.webp" alt="photo id" class="w-16 lg:w-32 rounded-full ml-12 sm:ml-16 lg:ml-4 xl:ml-12 mt-10">
                 <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Noé</h1>
