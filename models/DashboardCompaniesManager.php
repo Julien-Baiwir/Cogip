@@ -6,10 +6,15 @@ class DashboardCompaniesManager extends Model
         return $this->getCompaniesWithTypes('Companies', 5);
     }
 
-        public function addNewCompany($name, $tva, $country, $type_id)
-        {
-        return $this->insertNewCompany($name, $tva, $country, $type_id);
-        }
+    public function getAllCompanies()
+    {
+        return $this->getAllCompanies('Companies');
+    }
+
+    public function addNewCompany($name, $tva, $country, $type_id)
+    {
+    return $this->insertNewCompany($name, $tva, $country, $type_id);
+    }
   
 
 }

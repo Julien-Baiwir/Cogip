@@ -271,7 +271,29 @@ protected function insertNewCompany($name, $tva, $country, $type_id)
 
 
 // Dashboard Contacts
+protected function insertNewContact($name, $email, $phone, $company_id) 
+{
+    $sql = "INSERT INTO contacts (name, email, phone, company_id, created_at, updated_at)
+    VALUES (:name, :email, :phone, :company_id, NOW(), NOW())";
 
+    $data = [  
+      'name' => $name,
+      'email' => $email,
+      'phone' => $phone,
+      'company_id' => $company_id
+    ];
+
+    try {
+        $req = $this->getBdd()->prepare($sql);
+     
+        foreach ($data as $key => $value) {
+            $req->bindValue(":$key", $value);
+        }
+        $req->execute();
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage(); 
+    }
+}
 
 // Dashboard Invoices
 

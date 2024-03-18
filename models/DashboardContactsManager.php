@@ -5,4 +5,10 @@ class DashboardContactsManager extends Model
     {
         return $this->getContactsWithCompanies('Contacts', 5);
     }
+
+    public function addNewContact($name, $email, $phone, $company_id) 
+    {
+    return $this->insertNewContact($name, $email, $phone, $company_id) 
+    }
 }
+
