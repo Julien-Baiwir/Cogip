@@ -218,6 +218,8 @@ protected function getProfileById($profileId, $obj)
     return $profileDetails;
 }
 
+// Dashboard Statistics
+
 protected function getStatistics()
 {
     $statistics = [];
@@ -240,9 +242,41 @@ protected function getStatistics()
     return $statistics;
 }
 
+// Dashboard Companies
+// COMPANIES  -> CompaniesManager.php / HomeManager.php
+protected function insertNewCompany($name, $tva, $country, $type_id)
+{
+    $sql = "INSERT INTO companies (name, tva, country, type_id, created_at, update_dat)
+             VALUES (:name, :tva, :country, :type_id, NOW(), NOW())";
 
+    $data = [
+        'name' => $name,
+        'tva' => $tva,
+        'country' => $country,
+        'type_id' => $type_id
+    ];
+
+    try {
+        $req = $this->getBdd()->prepare($sql);
+     
+        foreach ($data as $key => $value) {
+            $req->bindValue(":$key", $value);
+        }
+        $req->execute();
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage(); 
+    }
 }
 
+
+
+// Dashboard Contacts
+
+
+// Dashboard Invoices
+
+
+}
 
 
 

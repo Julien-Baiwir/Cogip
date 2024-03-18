@@ -11,7 +11,7 @@ class Router
         {
             // Chargement automatique des classes dans le dossier models
             spl_autoload_register(function ($class){
-                require_once('models/' . $class . '.php'); 
+                require_once( 'models/'. $class . '.php'); 
             });
     
 
