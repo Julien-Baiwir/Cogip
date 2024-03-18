@@ -32,7 +32,7 @@
                 <div class="w-80 h-7 absolute inset-0 bg-yellow-300 z-0" style="top:40px; left: 275px;"></div> <!-- Ajout de left: 50px; -->
             </div>
             <div class="search flex justify-end mr-32">
-                <input type="text" class="border-2 border-yellow-300 w-1/4 h-10 m-5 rounded-lg" placeholder="Search company name">
+                <input type="text" class="border-2 border-yellow-300 w-1/4 h-10 m-5 rounded-lg" placeholder="Search company name" id="searchCompagnies">
             </div>
             <section class=" flex flex-col items-center mt-16 mb-40">
                 <div class="array w-5/6 flex content-center">
