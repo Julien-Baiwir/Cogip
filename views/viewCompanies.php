@@ -38,19 +38,19 @@
                 <div class="array w-5/6 flex content-center">
                     <table class="w-full table-auto border-collapse">
                         <tr class="bg-yellow-300">
-                            <th class="px-4 py-2 ">Name</th>
-                            <th class="px-4 py-2 ">TVA</th>
-                            <th class="px-4 py-2 ">Country</th>
-                            <th class="px-4 py-2 ">Type</th>
-                            <th class="px-4 py-2 ">Created at</th>
+                            <th class="p-2 ">Name</th>
+                            <th class="p-2 ">TVA</th>
+                            <th class="p-2 ">Country</th>
+                            <th class="p-2 ">Type</th>
+                            <th class="p-2 ">Created at</th>
                         </tr>
                         <?php foreach($companies as $company): ?>
                             <tr>
-                                <td class="border px-4 py-2 font-semibold"><a href="index.php?url=details/<?= $company->getID() ?>"><?= $company->getName() ?></a></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $company->getTva() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $company->getCountry() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $company->getType_name() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $company->getCreated_at() ?></td>
+                                <td class="border p-2 font-semibold"><a href="index.php?url=details/<?= $company->getID() ?>"><?= $company->getName() ?></a></td>
+                                <td class="border p-2 font-semibold"><?= $company->getTva() ?></td>
+                                <td class="border p-2 font-semibold"><?= $company->getCountry() ?></td>
+                                <td class="border p-2 font-semibold"><?= $company->getType_name() ?></td>
+                                <td class="border p-2 font-semibold"><?= $company->getCreated_at() ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>

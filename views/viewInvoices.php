@@ -38,17 +38,17 @@
                 <div class="array w-5/6 flex content-center">
                     <table class="w-full table-auto border-collapse">
                         <tr class="bg-yellow-300">
-                            <th class="px-4 py-2 ">Invoice number</th>
-                            <th class="px-4 py-2 ">Due dates</th>
-                            <th class="px-4 py-2 ">Compagny</th>
-                            <th class="px-4 py-2 ">Created at</th>
+                            <th class="p-2 ">Invoice number</th>
+                            <th class="p-2 ">Due dates</th>
+                            <th class="p-2 ">Compagny</th>
+                            <th class="p-2 ">Created at</th>
                         </tr>
                         <?php foreach($invoices as $invoice): ?>
                             <tr>
-                                <td class="border px-4 py-2 font-semibold"><?= $invoice->getRef() ?></a></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $invoice->getUpdate_at() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $invoice->getCompany_name() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $invoice->getCreated_at() ?></td>
+                                <td class="border p-2 font-semibold"><?= $invoice->getRef() ?></a></td>
+                                <td class="border p-2 font-semibold"><?= $invoice->getUpdate_at() ?></td>
+                                <td class="border p-2 font-semibold"><?= $invoice->getCompany_name() ?></td>
+                                <td class="border p-2 font-semibold"><?= $invoice->getCreated_at() ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>

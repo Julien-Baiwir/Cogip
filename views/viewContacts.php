@@ -38,19 +38,20 @@
                 <div class="array w-5/6 flex content-center">
                     <table class="w-full table-auto border-collapse">
                         <tr class="bg-yellow-300">
-                            <th class="px-4 py-2 ">Name</th>
-                            <th class="px-4 py-2 ">Phone</th>
-                            <th class="px-4 py-2 ">Email</th>
-                            <th class="px-4 py-2 ">Company</th>
-                            <th class="px-4 py-2 ">Created at</th>
+                            <th class="p-2 ">Name</th>
+                            <th class="p-2 ">Phone</th>
+                            <th class="p-2 ">Email</th>
+                            <th class="p-2 ">Company</th>
+                            <th class="p-2 ">Created at</th>
                         </tr>
                         <?php foreach($contacts as $contact): ?>
                             <tr>
-                                <td class="border px-4 py-2 font-semibold"><?= $contact->getName() ?></a></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $contact->getPhone() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $contact->getEmail() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $contact->getCompanyName() ?></td>
-                                <td class="border px-4 py-2 font-semibold"><?= $contact->getCreatedAt() ?></td>
+                                <td class="border p-2 font-semibold"><a href="index.php?url=profile/<?php /*echo $contact->getId(); */?>">
+                                    <?php echo $contact->getName(); ?></a></td>
+                                <td class="border p-2 font-semibold"><?= $contact->getPhone() ?></td>
+                                <td class="border p-2 font-semibold"><?= $contact->getEmail() ?></td>
+                                <td class="border p-2 font-semibold"><?= $contact->getCompanyName() ?></td>
+                                <td class="border p-2 font-semibold"><?= $contact->getCreatedAt() ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>
