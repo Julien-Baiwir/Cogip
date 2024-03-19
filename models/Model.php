@@ -273,7 +273,7 @@ protected function insertNewCompany($name, $tva, $country, $type_id)
 // Dashboard Contacts
 protected function insertNewContact($name, $email, $phone, $company_id) 
 {
-    $sql = "INSERT INTO contacts (name, email, phone, company_id, created_at, updated_at)
+    $sql = "INSERT INTO contacts (name, email, phone, company_id, created_at, update_at)
     VALUES (:name, :email, :phone, :company_id, NOW(), NOW())";
 
     $data = [  
