@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/src/output.css">
-    <title>Cogip Contacts</title>
+    <title>Cogip Details Compagnies</title>
 
     <style>
       #menu-toggle:checked + #navbar {
@@ -17,6 +17,9 @@
         z-index: 9999;
         background-color: white;
       }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
   </style>
 </head>      
 <body>
@@ -25,20 +28,21 @@
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         ?>
-        <section class="p-2">
+        <section class="p-2 flex flex-col">
             <?php foreach ($detailsCompanies  as $detailsCompany): ?>
-            <div class="flex flex-col pl-10 border-b-2 border-black">
+            <div class="flex flex-col m-5 border-b-2 border-black">
                 <h2 class="text-4xl font-black uppercase font-inter"><?php echo $detailsCompany->getCompanyName(); ?></h2>
+                <br>
                 <div class="font-display">
-                    <p class="ml-1"><span class="font-bold">Name:</span><?php echo $detailsCompany->getCompanyName(); ?></p>
-                    <p class="ml-1"><span class="font-bold">TVA: </span><?php echo $detailsCompany->getTva(); ?></p>
-                    <p class="ml-1"><span class="font-bold">Country: </span><?php echo $detailsCompany->getCountry(); ?></p>
-                    <p class="ml-1"><span class="font-bold">Type: </span><?php echo $detailsCompany->getTypeName(); ?></p>  
+                    <p class="ml-2"><span class="font-bold">Name:</span><?php echo $detailsCompany->getCompanyName(); ?></p>
+                    <p class="ml-2"><span class="font-bold">TVA: </span><?php echo $detailsCompany->getTva(); ?></p>
+                    <p class="ml-2"><span class="font-bold">Country: </span><?php echo $detailsCompany->getCountry(); ?></p>
+                    <p class="ml-2"><span class="font-bold">Type: </span><?php echo $detailsCompany->getTypeName(); ?></p>  
                 </div>   
             </div>
             <?php endforeach; ?>
 
-            <div class="px-10">
+            <div class="m-5">
                 <h2 class="text-4xl font-black mb-16 font-inter">Contact people</h2>
                 <div class="w-full flex">
                     <?php foreach ($detailsContacts as $detailsContact): ?>
@@ -49,8 +53,8 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="px-10">
-                <h2 class="text-4xl font-black mb-16">Last invoices</h2>
+            <div class="m-5">
+                <h2 class="text-4xl font-black p-2">Last invoices</h2>
                 <div>
                     <table class="w-full relative overflow-hidden z-10 bg-white p-8">
                         <tr class="bg-yellow-300 text-[12px]  justify-between h-fit p-2" >
