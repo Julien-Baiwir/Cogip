@@ -12,7 +12,7 @@
     <main class="bg-gray-200  w-screen flex lg:pr-10 ">
         <div class="board w-1/3 h-fit bg-white shadow-lg pb-5 flex flex-col justify-between h-svh lg:w-1/6 sticky top-0 ">
             <div class="board__content">
-                <img src="src/img/geek.webp" alt="photo id" class="w-16 lg:w-32 rounded-full ml-12 sm:ml-16 lg:ml-4 xl:ml-12 mt-10">
+                <img src="assets/images/pp.jpg" alt="photo id" class="w-16 lg:w-32 rounded-full ml-12 sm:ml-16 lg:ml-4 xl:ml-12 mt-10">
                 <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Noé</h1>
                 <h1 class="text-center text-xs lg:text-xl font-bold p-4">Andernack</h1>
                 <div class="line border-t-2"></div>
@@ -55,7 +55,7 @@
             </div>
             <div class="logout">
                 <div class="logout__content flex items-center justify-between mt-12 mr-12 ">
-                    <img src="src/img/geek.webp" alt="photo id" class="w-4 lg:w-8 rounded-full m-5 ">
+                    <img src="assets/images/pp.jpg" alt="photo id" class="w-4 lg:w-8 rounded-full m-5 ">
                     <a href="index.php?url=home" class="text-xs lg:text-xl text-blue-500 hover:text-violet-600 ">Logout</a>
                 </div>
             </div>
@@ -154,9 +154,6 @@
                     <path d="M271.807 197.353C273.557 197.353 274.976 195.934 274.976 194.185C274.976 192.435 273.557 191.017 271.807 191.017C270.056 191.017 268.637 192.435 268.637 194.185C268.637 195.934 270.056 197.353 271.807 197.353Z" fill="white" />
                     <path d="M245.7 209.393H209.351V211.66H245.7V209.393Z" fill="black" />
                 </svg>
-
-
-
             </div>
 
             <div class=" w-full flex flex-col lg:items-center  h-screen lg:mt-96">
@@ -201,7 +198,5 @@
             </div>
         </div>
     </main>
-
 </body>
-
 </html>

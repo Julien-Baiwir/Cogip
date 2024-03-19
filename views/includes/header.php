@@ -23,7 +23,7 @@
     <!-- home page header -->
     <?php 
     $currentPage = isset($_GET['url']) ? $_GET['url'] : '';
-    $isHomePage = ($currentPage == 'home');
+    $isHomePage = $currentPage === '' || $currentPage === 'home';
 
     if ($isHomePage): ?>
     <section class="flex flex-col items-center font-black lg:flex-row lg:p-14 p-8" id="homepage">

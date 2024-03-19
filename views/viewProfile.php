@@ -20,33 +20,28 @@
   </style>
 </head>
 <body>
-  <main>
-    <?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-    ?>
-    <?php foreach ($profile as $profile): ?>
-      <section class="flex flex-row flex-wrap items-center justify-center gap-10 font-display m-5">
-        <div>
-            <h2 class="relative font-black p-2 text-4xl "><?php echo $profile->getName(); ?><span class="bg-yellow-300 absolute -inset-1 -skew-y-3" aria-hidden="true"></span></h2>
-            <br>
+    <main>
+        <?php
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+        ?>
+        <?php foreach ($profile as $profile): ?>
+        <section class="flex flex-row flex-wrap items-center justify-center gap-10 font-display m-5">
             <div>
-                <p><span class="font-semibold">Name: </span><?php echo $profile->getName(); ?></p>
-                <p><span class="font-semibold">Phone: </span><?php echo $profile->getPhone(); ?></p>
-                <p><span class="font-semibold">Mail: </span><?php echo $profile->getEmail(); ?></p>
-                <p><span class="font-semibold">Company: </span><?php echo $profile->getCompanyName(); ?></p>                 
+                <h2 class="font-black p-2 text-4xl font-inter"><?php echo $profile->getName(); ?></h2>
+                <br>
+                <div class="font-display">
+                    <p><span class="font-semibold">Name: </span><?php echo $profile->getName(); ?></p>
+                    <p><span class="font-semibold">Phone: </span><?php echo $profile->getPhone(); ?></p>
+                    <p><span class="font-semibold">Mail: </span><?php echo $profile->getEmail(); ?></p>
+                    <p><span class="font-semibold">Company: </span><?php echo $profile->getCompanyName(); ?></p>                 
+                </div>
             </div>
-       
-        </div>
-        <div class="m-5">
-          <img src="assets/images/pp-bertram.png" alt="profil picture Bertram" class="rounded-xl">
-        </div>       
-      </section>
-    <?php endforeach; ?>   
-  </main>  
+            <div class="m-5">
+                <img src="assets/images/pp.jpg" alt="profil picture" class="rounded-xl w-[200px]">
+            </div>       
+        </section>
+        <?php endforeach; ?>   
+    </main>  
 </body>
 </html>
-
-
-
-
