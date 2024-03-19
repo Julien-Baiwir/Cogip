@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -15,8 +15,8 @@
         <div class="board w-1/3 h-screen bg-white shadow-lg pb-5 flex flex-col justify-between h-svh lg:w-1/6 sticky top-0 ">
             <div class="board__content">
                 <img src="assets/images/pp.jpg" alt="photo id" class="w-16 lg:w-32 rounded-full ml-12 sm:ml-16 lg:ml-4 xl:ml-12 mt-10">
-                <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Noé</h1>
-                <h1 class="text-center text-xs lg:text-xl font-bold p-4">Andernack</h1>
+                <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Jean-Michel</h1>
+                <h1 class="text-center text-xs lg:text-xl font-bold p-4">Delacompta</h1>
                 <div class="line border-t-2"></div>
                 <div class="dashboard flex items-center mt-5 ">
                     <svg class="ml-2  w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@
                     <p class="ml-2 text-xs">dashboard/</p>
                 </div>
                 <div class="content__rectangle scroll-smooth w-9/12 rounded-lg  ml-2 bg-indigo-300 h-[120px] absolute top-[60px] lg:w-10/12 lg:mt-32 lg:h-[200px] lg:ml-10">
-                    <h1 id="text" class="ml-5 mt-2 text-white w-[110px] lg:text-6xl lg:w-[900px]">Welcome back Noé!</h1>
+                    <h1 id="text" class="ml-5 mt-2 text-white w-[110px] lg:text-6xl lg:w-[900px]">Hello Jean-Michel!</h1>
                     <p class="ml-5 text-xs font-light text-white w-[120px] lg:text-2xl  lg:w-[500px] lg:mt-10">You can
                         here add an invoice, a company and some contacts</p>
                 </div>

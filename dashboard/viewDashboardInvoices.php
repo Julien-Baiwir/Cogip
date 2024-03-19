@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard Invoices</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -15,8 +15,8 @@
         <div class="board w-1/3 h-fit bg-white shadow-lg pb-5 flex flex-col justify-between h-svh lg:w-1/6 sticky top-0 ">
             <div class="board__content">
                 <img src="assets/images/pp.jpg" alt="photo id" class="w-16 lg:w-32 rounded-full ml-12 sm:ml-16 lg:ml-4 xl:ml-12 mt-10">
-                <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Noé</h1>
-                <h1 class="text-center text-xs lg:text-xl font-bold p-4">Andernack</h1>
+                <h1 class="text-center text-xs lg:text-xl font-bold mt-5">Jean-Michel</h1>
+                <h1 class="text-center text-xs lg:text-xl font-bold p-4">Delacompta</h1>
                 <div class="line border-t-2"></div>
                 <div class="dashboard flex items-center mt-5 ">
                     <svg class="ml-2  w-[15px] h-[15px] lg:w-[30px] lg:h-[30px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,9 +70,9 @@
                     <p class="ml-2 text-xs">dashboard/</p>
                 </div>
                 <div class="content__rectangle w-9/12 rounded-lg  ml-2 bg-indigo-300 h-[120px] absolute top-[60px] lg:w-10/12 lg:mt-32 lg:h-[200px] lg:ml-10">
-                    <h1 class="ml-5 mt-2 text-white w-[110px] lg:text-6xl lg:w-[900px]">Welcome back Noé!</h1>
+                    <h1 class="ml-5 mt-2 text-white w-[110px] lg:text-6xl lg:w-[900px]">Hello Jean-Michel!</h1>
                     <p class="ml-5 text-xs font-light text-white w-[120px] lg:text-2xl  lg:w-[500px] lg:mt-10">You can
-                        here add an invoice, a company and some contacts</p>
+                        here add a new invoice</p>
                 </div>
                 <svg class="absolute  left-3/4 sm:left-[600px] h-[120px] lg:h-[320px] lg:left-[900px]" viewBox="0 0 417 333" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M185.938 274.782C205.456 274.782 221.279 271.286 221.279 266.973C221.279 262.661 205.456 259.165 185.938 259.165C166.42 259.165 150.597 262.661 150.597 266.973C150.597 271.286 166.42 274.782 185.938 274.782Z" fill="black" />
