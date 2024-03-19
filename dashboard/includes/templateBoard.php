@@ -1,7 +1,5 @@
-<?php require ('headerBoard.php'); ?> 
-
-
-<?= $content ?>
-
-    
-<?php require ('footerBoard.php'); ?> 
+<header></header>
+<main>
+ <?= $content ?>   
+</main>
+<footer></footer>    
