@@ -25,7 +25,7 @@
             <li><a href="index.php?url=contacts">Contacts</a></li>
             <li><a href="index.php?url=invoices">Invoices</a></li>
             <li><a href="index.php?url=login">Dashboard</a></li>
-            <li><a href="index.php?url=login">Sign up</a></li>
+            <li><a href="index.php?url=signup">Sign up</a></li>
             <li><a href="index.php?url=login">Login</a></li>
         </ul>
     </nav>

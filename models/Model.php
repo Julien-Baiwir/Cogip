@@ -6,7 +6,7 @@ abstract class Model
     private static $_bdd;
 
     private static function setBdd(){
-        self::$_bdd = new PDO('mysql:localhost;dbname=cogip2;charset=utf8', 'root', 'root84$');// identifiant et mot de passe 
+        self::$_bdd = new PDO('mysql:localhost;dbname=cogip2;charset=utf8', 'root', 'root');// identifiant et mot de passe 
         self::$_bdd->exec('USE cogip2');
         self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     
